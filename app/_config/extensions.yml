@@ -3,7 +3,6 @@ EdgarIndustries\ElementalMap\Model\MapMarker:
   extensions:
     content: Netwerkstatt\Site\Extension\MapMarker
     gallery: PurpleSpider\BasicGalleryExtension\PhotoGalleryExtension
-    slug: Nightjar\Slug\Slug("Title", null, true)
     cmspermissions: Netwerkstatt\Site\Extension\CMSPermissions
   gallery-cms-tab: Bilder
 

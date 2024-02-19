@@ -16,7 +16,7 @@ use TractorCow\Fluent\State\FluentState;
 /**
  * Class \Netwerkstatt\Site\Extension\MapMarker
  *
- * @property \EdgarIndustries\ElementalMap\Model\MapMarker|\Netwerkstatt\Site\Extension\MapMarker $owner
+ * @property \Netwerkstatt\Site\Extension\MapMarker $owner
  * @property string $Content
  */
 class MapMarker extends DataExtension
@@ -49,9 +49,10 @@ class MapMarker extends DataExtension
 
     public function getBulkUploadFolderName()
     {
-        return FluentState::singleton()->withState(function (FluentState $state) {
-            $state->setLocale('de_DE');
-            return 'locations/' . $this->getOwner()->URLSlug;
-        });
+        return 'locations';
+//        return FluentState::singleton()->withState(function (FluentState $state) {
+//            $state->setLocale('de_DE');
+//            return 'locations/' . $this->getOwner()->URLSlug;
+//        });
     }
 }

@@ -6,40 +6,41 @@
         {
             "type": "git",
             "url": "https://github.com/wernerkrauss/silverstripe-elemental-map.git"
+        },
+        {
+            "type": "git",
+            "url": "https://github.com/wernerkrauss/silverstripe-elemental-stylings.git"
+        },
+        {
+            "type": "git",
+            "url": "https://github.com/kevinnoorlander/silverstripe-menu.git"
         }
     ],
     "require": {
         "php": "^8.1",
-        "silverstripe/recipe-plugin": "^1.2",
-        "silverstripe/recipe-cms": "^4.11",
-        "tractorcow/silverstripe-fluent": "^6.0.0",
-        "dnadesign/silverstripe-elemental": "^4",
-        "dynamic/silverstripe-elemental-promos": "^3",
-        "fractas/elemental-stylings": "1.0-rc2",
-        "jonom/silverstripe-betternavigator": "^5.2.0",
-        "lerni/klaro-cookie-consent": "v2.x-dev as 0.2",
-        "stevie-mayhew/hasoneedit": "^2",
-        "silverstripe/login-forms": "~4.7.0@stable",
-        "nightjar/ss-slug": "^2",
-        "purplespider/silverstripe-basic-gallery-extension": "^3",
-        "purplespider/silverstripe-elemental-basic-gallery": "^2",
-        "gorriecoe/silverstripe-menu": "^2",
+        "silverstripe/recipe-cms": "^5.1",
+        "tractorcow/silverstripe-fluent": "^7.0.0",
+        "dnadesign/silverstripe-elemental": "^5",
+        "dynamic/silverstripe-elemental-promos": "^4",
+        "fractas/elemental-stylings": "dev-wernerkrauss-cms-5",
+        "jonom/silverstripe-betternavigator": "^6",
+        "silverstripe/login-forms": "^5",
+        "purplespider/silverstripe-basic-gallery-extension": "^4",
+        "purplespider/silverstripe-elemental-basic-gallery": "^3",
+        "gorriecoe/silverstripe-menu": "dev-main as 3.0",
         "symbiote/silverstripe-grouped-cms-menu": "^4",
-        "symbiote/silverstripe-gridfieldextensions": "^3.5.0",
-        "edgarindustries/silverstripe-elemental-map": "dev-remove-guzzle-dependency",
-        "bigfork/silverstripe-mapboxfield": "^0.0.3",
-        "silverstripe/googlesitemaps": "^2",
-        "jonom/focuspoint": "^4",
-        "wernerkrauss/silverstripe-piwik": "^0.4.0",
-        "wedevelopnl/silverstripe-webp-images": "^1"
+        "symbiote/silverstripe-gridfieldextensions": "^4",
+        "silverstripe/googlesitemaps": "^3",
+        "jonom/focuspoint": "^5",
+        "wedevelopnl/silverstripe-webp-images": "^2"
     },
     "require-dev": {
-        "dnadesign/silverstripe-populate": "^2.2",
+        "dnadesign/silverstripe-populate": "^3.0.0-beta1",
         "phpunit/phpunit": "^9.5",
         "silverleague/ideannotator": "^3",
         "squizlabs/php_codesniffer": "^3.6",
         "wernerkrauss/silverstripe-rector": "dev-main",
-        "syntro/silverstripe-phpstan": "^1.0",
+        "syntro/silverstripe-phpstan": "^5.0",
         "deployer/deployer": "^7"
     },
     "extra": {

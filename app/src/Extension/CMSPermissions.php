@@ -9,7 +9,7 @@ use SilverStripe\Security\PermissionProvider;
 /**
  * Class \Netwerkstatt\Site\Extension\CMSPermissions
  *
- * @property \EdgarIndustries\ElementalMap\Model\MapMarker|\Netwerkstatt\Site\Extension\CMSPermissions $owner
+ * @property \Netwerkstatt\Site\Extension\CMSPermissions $owner
  */
 class CMSPermissions extends DataExtension implements PermissionProvider
 {

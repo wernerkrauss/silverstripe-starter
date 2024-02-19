@@ -1,0 +1,16 @@
+---
+Name: Site-menus
+---
+
+gorriecoe\Menu\Models\MenuLink:
+  default_sort: Sort ASC
+  extensions:
+    DisableLink: Netwerkstatt\Site\Extension\DisableMenuLink
+
+
+gorriecoe\Menu\Models\MenuSet:
+  sets:
+    #    main: Main menu
+    footer:
+      title: Footer Menu
+      allow_children: true

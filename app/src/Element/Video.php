@@ -57,6 +57,7 @@ class Video extends BaseElement
      */
     private static $owns = [
     ];
+
     /*
      * @config
      */
@@ -67,8 +68,7 @@ class Video extends BaseElement
 
     public function getCMSFields(): FieldList
     {
-        $this->beforeUpdateCMSFields(function (FieldList $fields) {
-
+        $this->beforeUpdateCMSFields(static function (FieldList $fields) {
         });
 
         return parent::getCMSFields();

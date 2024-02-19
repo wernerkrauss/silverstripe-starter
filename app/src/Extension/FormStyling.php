@@ -24,7 +24,7 @@ class FormStyling extends \SilverStripe\Core\Extension
             $this->fieldSetClasses[$class] = $class;
         }
 
-        return $this->owner;
+        return $this->getOwner();
     }
 
     public function getFieldsetClasses(): string

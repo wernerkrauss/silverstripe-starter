@@ -25,7 +25,7 @@ class FormFieldHolderStyling extends Extension
             $this->holderClasses[$this->getOwnerID()][$class] = $class;
         }
 
-        return $this->owner;
+        return $this->getOwner();
     }
 
     public function getHolderClasses(): string
@@ -39,6 +39,6 @@ class FormFieldHolderStyling extends Extension
 
     public function getOwnerID()
     {
-        return Convert::raw2htmlid($this->owner->getName());
+        return Convert::raw2htmlid($this->getOwner()->getName());
     }
 }

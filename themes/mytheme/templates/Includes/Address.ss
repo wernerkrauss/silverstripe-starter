@@ -20,14 +20,14 @@
 						<span itemprop="addressCountry">Austria</span>
 					</span>
 				<br>
-            <div class="mt-2"><img src="$resourceURL('themes/mytheme/images/phone-2.svg')" alt="E-Mail" class="h-4 mr-1 inline">
+            <div class="mt-2"><img src="<%-- $resourceURL('themes/mytheme/images/phone-2.svg') --%>" alt="E-Mail" class="h-4 mr-1 inline">
 					<a itemprop="telephone" class="text-primary-500"
                        href="tel:+43xxxx" content="+43 xxx xxxx">
 						  +43 XXX XXXX</a></div>
 
 
 
-                <div class="mt-2"><img src="$resourceURL('themes/mytheme/images/email-action-unread-1.svg')" alt="E-Mail"
+                <div class="mt-2"><img src="<%--$resourceURL('themes/mytheme/images/email-action-unread-1.svg')--%>" alt="E-Mail"
                      class="h-4 mr-1 inline">
                 	<a itemprop="email" href="mailto:office@netwerkstatt.at"
                        class="text-primary-500">office@netwerkstatt.at</a></div>

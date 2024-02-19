@@ -1,6 +1,6 @@
 <div class="flex w-full lg:max-w-1/3 xl:w-40 shrink-0 xl:mr-8">
     <a href="$LocalalisedHomeLink" class="mx-auto xl:mx-0">
-        <img class="h-28 md:h-32 xl:h-40" src="$resourceURL('themes/mytheme/images/logo.svg')"
+        <img class="h-28 md:h-32 xl:h-40" src="<%-- $resourceURL('themes/mytheme/images/logo.svg') --%>"
              alt="Logo">
     </a>
 </div>

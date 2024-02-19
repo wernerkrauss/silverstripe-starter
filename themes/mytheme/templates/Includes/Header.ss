@@ -8,7 +8,7 @@
                     <%--                        src="$resourceURL('themes/mytheme/images/email-action-unread-1.svg')" alt="E-Mail"--%>
                     <%--                        class="h-4 xl:h-5 mr-3"></span>--%>
                     <span class="text-xs xl:text-sm max-xl:drop-shadow-white"><img
-                            src="$resourceURL('themes/mytheme/images/phone-2.svg')" alt="E-Mail"
+                            src="<%-- $resourceURL('themes/mytheme/images/phone-2.svg') --%>" alt="E-Mail"
                             class="h-4 xl:h-5 mr-1"></span>
                     <%--                    <span class="text-xs xl:text-sm max-xl:drop-shadow-white"><img--%>
                     <%--                        src="$resourceURL('themes/mytheme/images/maps-pin-1.svg')" alt="E-Mail"--%>
@@ -17,7 +17,7 @@
                 </div>
                 <div class="flex mr-3 md:mr-5">
                     <a class="text-xs xl:text-sm max-xl:drop-shadow-white" href="$LocaleInformation('de_DE').Link"><img
-                            src="$resourceURL('themes/mytheme/images/flag_de.svg')" alt="Flagge Deutschland"
+                            src="<%-- $resourceURL('themes/mytheme/images/flag_de.svg')--%>" alt="Flagge Deutschland"
                             class="h-4 xl:h-6 mr-3"></a>
                     <a class="text-xs xl:text-sm max-xl:drop-shadow-white hidden md:block"
                        href="$LocaleInformation('de_DE').Link">Deutsch</a>
@@ -25,7 +25,7 @@
 
                 <div class="flex mr-5">
                     <a class="text-xs xl:text-sm max-xl:drop-shadow-white" href="$LocaleInformation('en_GB').Link"><img
-                            src="$resourceURL('themes/mytheme/images/flag_en.svg')" alt="Flag Britain"
+                            src="<%--$resourceURL('themes/mytheme/images/flag_en.svg')--%>" alt="Flag Britain"
                             class="h-4 xl:h-6 mr-3"></a>
                     <a class="text-xs xl:text-sm max-xl:drop-shadow-white hidden md:block"
                        href="$LocaleInformation('en_GB').Link">English</a>

@@ -32,7 +32,8 @@
         "symbiote/silverstripe-gridfieldextensions": "^4",
         "silverstripe/googlesitemaps": "^3",
         "jonom/focuspoint": "^5",
-        "wedevelopnl/silverstripe-webp-images": "^2"
+        "wedevelopnl/silverstripe-webp-images": "^2",
+        "lerni/klaro-cookie-consent": "v2.x-dev as 1.0"
     },
     "require-dev": {
         "dnadesign/silverstripe-populate": "^3.0.0-beta1",

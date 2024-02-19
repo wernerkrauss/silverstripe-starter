@@ -23,7 +23,6 @@ ddev sake dev/tasks/PopulateTask
 
 TODO: Update to SS5
 TODO: Image Block
-TODO:  "lerni/klaro-cookie-consent": "v2.x-dev as 0.2", SS5
 TODO: ssslug module for SS5 (map marker)
 TODO: map element and mapbox field for backend
 TODO: Silverstripe Piwik SS5

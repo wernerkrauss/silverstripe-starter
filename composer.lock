@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "56deb03b7fb9dc030e4fa1f02b1a1445",
+    "content-hash": "beec20536a7f4db7a43e31f2c10770c9",
     "packages": [
         {
             "name": "colymba/gridfield-bulk-editing-tools",
@@ -1887,6 +1887,69 @@
                 }
             ],
             "time": "2024-01-28T23:22:08+00:00"
+        },
+        {
+            "name": "lerni/klaro-cookie-consent",
+            "version": "v2.x-dev",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/lerni/klaro-cookie-consent.git",
+                "reference": "2f1c97b521f1a72ab8b61bd602e218770cf7bd79"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/lerni/klaro-cookie-consent/zipball/2f1c97b521f1a72ab8b61bd602e218770cf7bd79",
+                "reference": "2f1c97b521f1a72ab8b61bd602e218770cf7bd79",
+                "shasum": ""
+            },
+            "require": {
+                "silverstripe/cms": "^4 || ^5",
+                "silverstripe/siteconfig": "^4 || ^5",
+                "symbiote/silverstripe-gridfieldextensions": "^3 || ^4"
+            },
+            "suggest": {
+                "lerni/silverstripe-googleanalytics": "Silverstripe Google Analytics & Tag Manager Module"
+            },
+            "type": "silverstripe-vendormodule",
+            "extra": {
+                "installer-name": "klaro-cookie-consent",
+                "expose": [
+                    "node_modules/klaro/dist"
+                ]
+            },
+            "autoload": {
+                "psr-4": {
+                    "Kraftausdruck\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Lukas Erni",
+                    "email": "le@kraftausdruck.ch",
+                    "homepage": "https://kraftausdruck.ch",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Klaro Silverstripe Integration",
+            "homepage": "https://github.com/lerni/klaro-cookie-consent",
+            "keywords": [
+                "Klaro",
+                "consent",
+                "cookie",
+                "dsgvo",
+                "ePrivacy",
+                "gdpr",
+                "silverstripe"
+            ],
+            "support": {
+                "issues": "https://github.com/lerni/klaro-cookie-consent/issues",
+                "source": "https://github.com/lerni/klaro-cookie-consent/tree/v2"
+            },
+            "time": "2024-02-13T20:08:22+00:00"
         },
         {
             "name": "m1/env",
@@ -9068,12 +9131,19 @@
             "version": "dev-main",
             "alias": "3.0",
             "alias_normalized": "3.0.0.0"
+        },
+        {
+            "package": "lerni/klaro-cookie-consent",
+            "version": "2.9999999.9999999.9999999-dev",
+            "alias": "1.0",
+            "alias_normalized": "1.0.0.0"
         }
     ],
     "minimum-stability": "dev",
     "stability-flags": {
         "fractas/elemental-stylings": 20,
         "gorriecoe/silverstripe-menu": 20,
+        "lerni/klaro-cookie-consent": 20,
         "wernerkrauss/silverstripe-rector": 20
     },
     "prefer-stable": true,

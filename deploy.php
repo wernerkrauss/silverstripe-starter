@@ -23,7 +23,7 @@ host($hostname)
     ->set('http_user', $user)
     ->set('bin/composer', $php_cli . ' -d allow_url_fopen=On ~/.linuxbrew/bin/composer')
     ->set('stage','live')
-    ->set('deploy_path', '/usr/www/users/' . $user . '/ss4'); // Define the base path to deploy your project to.
+    ->set('deploy_path', '/usr/www/users/' . $user); // Define the base path to deploy your project to.
 
 
 // env('timezone', 'DE');

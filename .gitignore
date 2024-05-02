@@ -8,6 +8,5 @@
 /public/assets/
 /themes/*/node_modules
 
-#themes/gruenerbaum/dist/
 .idea
 /error.log

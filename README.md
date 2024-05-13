@@ -21,7 +21,7 @@ ddev sake dev/tasks/PopulateTask
 ```
 
 
-TODO: Image Block
+TODO: ~~Image Block~~
 TODO: ssslug module for SS5 (map marker)
 TODO: map element and mapbox field for backend
 TODO: Silverstripe Piwik SS5

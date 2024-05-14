@@ -4,7 +4,7 @@
             <% cached $CurrentReadingMode, $CurrentUser.ID, $Locale, $MenuLink.max('LastEdited') %>
             <ul class="text-white flex flex-wrap lg:flex-nowrap  leading-8 lg:gap-4 justify-between mx-4 lg:mx-0">
 
-                <% loop $MenuSet('footer') %>
+                <% loop $MenuSet('footer').Filter('ParentID',0) %>
                     <li class="w-1/2 lg:w-full mb-8 lg:mb-0">
                         <% if $Enabled && $LinkURL %>
                             <a href="{$LinkURL}"{$TargetAttr} class="$Class uppercase text-lg">

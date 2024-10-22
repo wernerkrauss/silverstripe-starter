@@ -2,7 +2,6 @@
 
 declare(strict_types=1);
 
-use DNADesign\Elemental\Models\BaseElement;
 use Netwerkstatt\SilverstripeRector\Rector\DataObject\EnsureTableNameIsSetRector;
 use Netwerkstatt\SilverstripeRector\Rector\Injector\UseCreateRector;
 use Netwerkstatt\SilverstripeRector\Rector\Misc\AddConfigPropertiesRector;
@@ -12,8 +11,6 @@ use Rector\CodeQuality\Rector\Class_\InlineConstructorDefaultToPropertyRector;
 use Rector\Config\RectorConfig;
 use Rector\Set\ValueObject\LevelSetList;
 use Rector\Set\ValueObject\SetList;
-use SilverStripe\Admin\ModelAdmin;
-use SilverStripe\ORM\DataObject;
 
 return static function (RectorConfig $rectorConfig): void {
     $rectorConfig->paths([
@@ -32,60 +29,25 @@ return static function (RectorConfig $rectorConfig): void {
 //
 //    // define sets of rules
     $rectorConfig->sets([
-        LevelSetList::UP_TO_PHP_81,
+        LevelSetList::UP_TO_PHP_83,
         SetList::CODE_QUALITY,
         SetList::CODING_STYLE,
         SilverstripeSetList::CODE_STYLE,
-        SilverstripeLevelSetList::UP_TO_SS_5_1
+        SilverstripeLevelSetList::UP_TO_SS_5_2
     ]);
 
     //Silverstripe rules
     $rectorConfig->rule(EnsureTableNameIsSetRector::class);
     $rectorConfig->rule(UseCreateRector::class);
 
-    $rectorConfig->ruleWithConfiguration(
-        AddConfigPropertiesRector::class,
-        [
-            ModelAdmin::class => [
-                'menu_title',
-                'menu_icon_class'
-            ],
-            DataObject::class => [
-                'owns',
-                'translate',
-                'defaults'
-            ],
-            \SilverStripe\Admin\LeftAndMain::class => [
-              'url_segment'
-            ],
-            BaseElement::class => [
-                'icon',
-                'inline_editable'
-            ],
-            \SilverStripe\ORM\DataExtension::class => [
-                'db',
-                'has_one',
-                'belongs_to',
-                'has_many',
-                'many_many',
-                'many_many_extraFields',
-                'belongs_many_many',
-                'default_sort',
-                'cascade_deletes',
-                'cascade_duplicates',
-                'searchable_fields',
-                'summary_fields',
-                'casting',
-                'singular_name',
-                'plural_name',
-                'owns',
-                'translate',
-                'defaults'
-            ],
-            \SilverStripe\Core\Extension::class => [
-                'allowed_actions',
-                'url_handlers'
-            ],
-        ]
-    );
+// example how to configure rector for custom  @config properties
+
+//    $rectorConfig->ruleWithConfiguration(
+//        AddConfigPropertiesRector::class,
+//        [
+//            \SilverStripe\Admin\LeftAndMain::class => [
+//              'url_segment'
+//            ],
+//         ]
+//    );
 };

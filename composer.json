@@ -17,9 +17,9 @@
         }
     ],
     "require": {
-        "php": "^8.1",
-        "silverstripe/recipe-cms": "^5.1",
-        "tractorcow/silverstripe-fluent": "^7.0.0",
+        "php": "^8.3",
+        "silverstripe/recipe-cms": "^5.2",
+        "tractorcow/silverstripe-fluent": "^7",
         "dnadesign/silverstripe-elemental": "^5",
         "dynamic/silverstripe-elemental-promos": "^4",
         "fractas/elemental-stylings": "dev-wernerkrauss-cms-5",

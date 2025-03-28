@@ -36,6 +36,7 @@
     "php": "^8.3",
     "silverstripe/framework": "~6.0.0@beta",
     "silverstripe/recipe-cms": "^6",
+    "silverstripe/sharedraftcontent": "^4",
     "tractorcow/silverstripe-fluent": "^8",
     "dnadesign/silverstripe-elemental": "^6",
     "dynamic/silverstripe-elemental-baseobject": "dev-silverstripe6",

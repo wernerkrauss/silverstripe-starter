@@ -18,7 +18,7 @@ use Symbiote\GridFieldExtensions\GridFieldOrderableRows;
  *
  * @property \Netwerkstatt\Site\Extension\MapBlock $owner
  */
-class MapBlock extends DataExtension
+class MapBlock extends \SilverStripe\Core\Extension
 {
 
     /**

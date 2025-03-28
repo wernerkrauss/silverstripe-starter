@@ -13,7 +13,7 @@ use SilverStripe\View\Parsers\URLSegmentFilter;
  * @property \DNADesign\Elemental\Models\BaseElement|\Netwerkstatt\Site\Extension\ElementAnchor $owner
  * @property string $AnchorName
  */
-class ElementAnchor extends DataExtension
+class ElementAnchor extends \SilverStripe\Core\Extension
 {
     /**
      * @config

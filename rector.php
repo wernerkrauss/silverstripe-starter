@@ -33,7 +33,7 @@ return static function (RectorConfig $rectorConfig): void {
         SetList::CODE_QUALITY,
         SetList::CODING_STYLE,
         SilverstripeSetList::CODE_STYLE,
-        SilverstripeLevelSetList::UP_TO_SS_5_2
+        SilverstripeLevelSetList::UP_TO_SS_6_0
     ]);
 
     //Silverstripe rules
@@ -41,6 +41,10 @@ return static function (RectorConfig $rectorConfig): void {
     $rectorConfig->rule(UseCreateRector::class);
 
 // example how to configure rector for custom  @config properties
+    $rectorConfig->ruleWithConfiguration(\Rector\Renaming\Rector\Name\RenameClassRector::class, [
+        'SilverStripe\ORM\DataExtension' => 'SilverStripe\Core\Extension',
+        'SilverStripe\View\ArrayData' => 'SilverStripe\Model\ArrayData',
+    ]);
 
 //    $rectorConfig->ruleWithConfiguration(
 //        AddConfigPropertiesRector::class,

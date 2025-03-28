@@ -19,7 +19,7 @@ use TractorCow\Fluent\State\FluentState;
  * @property \Netwerkstatt\Site\Extension\MapMarker $owner
  * @property string $Content
  */
-class MapMarker extends DataExtension
+class MapMarker extends \SilverStripe\Core\Extension
 {
     /**
      * @config

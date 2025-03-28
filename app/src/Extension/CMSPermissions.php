@@ -11,7 +11,7 @@ use SilverStripe\Security\PermissionProvider;
  *
  * @property \Netwerkstatt\Site\Extension\CMSPermissions $owner
  */
-class CMSPermissions extends DataExtension implements PermissionProvider
+class CMSPermissions extends \SilverStripe\Core\Extension implements PermissionProvider
 {
 
     /**
@@ -20,6 +20,7 @@ class CMSPermissions extends DataExtension implements PermissionProvider
      *   'VIEW_SITE' => 'View the site',
      * );
      */
+    #[\Override]
     public function providePermissions(): array
     {
         return [

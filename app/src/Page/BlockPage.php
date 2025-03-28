@@ -36,6 +36,7 @@ class BlockPage extends \Page
         ElementalPageExtension::class
     ];
 
+    #[\Override]
     protected function onBeforeWrite(): void
     {
         parent::onBeforeWrite();
@@ -46,6 +47,7 @@ class BlockPage extends \Page
         }
     }
 
+    #[\Override]
     public function getCMSFields(): FieldList
     {
         $fields = parent::getCMSFields();

@@ -66,6 +66,7 @@ class Video extends BaseElement
      */
     private static $inline_editable = false;
 
+    #[\Override]
     public function getCMSFields(): FieldList
     {
         $this->beforeUpdateCMSFields(static function (FieldList $fields) {
@@ -75,11 +76,13 @@ class Video extends BaseElement
     }
 
 
+    #[\Override]
     public function getSummary(): string
     {
         return 'Video';
     }
 
+    #[\Override]
     protected function provideBlockSchema(): array
     {
         $blockSchema = [];
@@ -93,6 +96,7 @@ class Video extends BaseElement
         return $blockSchema;
     }
 
+    #[\Override]
     public function getType(): string
     {
         return _t(self::class . '.BlockType', 'Video');

@@ -12,7 +12,7 @@ use SilverStripe\ORM\DataExtension;
  * @property \DNADesign\Elemental\Models\BaseElement|\Netwerkstatt\Site\Extension\ShowElement $owner
  * @property bool $ShowElement
  */
-class ShowElement extends DataExtension
+class ShowElement extends \SilverStripe\Core\Extension
 {
     /**
      * @config

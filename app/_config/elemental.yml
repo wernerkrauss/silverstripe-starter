@@ -2,7 +2,7 @@ DNADesign\Elemental\Models\BaseElement:
   extensions:
     - Netwerkstatt\Site\Extension\ElementAnchor
     - Netwerkstatt\Site\Extension\ShowElement
-    - Fractas\ElementalStylings\StylingSize
+#    - Fractas\ElementalStylings\StylingSize
   size:
     default: default
   defaults:

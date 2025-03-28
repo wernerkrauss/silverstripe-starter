@@ -13,7 +13,7 @@ use Symbiote\GridFieldExtensions\GridFieldEditableColumns;
  *
  * @property \Dynamic\Elements\Promos\Elements\ElementPromos|\Netwerkstatt\Site\Extension\PromoSize $owner
  */
-class PromoSize extends \SilverStripe\ORM\DataExtension
+class PromoSize extends \SilverStripe\Core\Extension
 {
     /**
      * @config

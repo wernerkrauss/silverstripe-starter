@@ -66,6 +66,7 @@ class Image extends BaseElement
      */
     private static bool $inline_editable = false;
 
+    #[\Override]
     public function getCMSFields(): FieldList
     {
         $this->beforeUpdateCMSFields(function (FieldList $fields) {
@@ -81,6 +82,7 @@ class Image extends BaseElement
     }
 
 
+    #[\Override]
     public function getSummary(): string
     {
         if ($this->Image()->exists()) {
@@ -91,6 +93,7 @@ class Image extends BaseElement
         return parent::getSummary();
     }
 
+    #[\Override]
     protected function provideBlockSchema(): array
     {
         $blockSchema = [];
@@ -104,6 +107,7 @@ class Image extends BaseElement
         return $blockSchema;
     }
 
+    #[\Override]
     public function getType(): string
     {
         return _t(self::class . '.BlockType', 'Image');

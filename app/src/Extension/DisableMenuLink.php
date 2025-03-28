@@ -12,7 +12,7 @@ use SilverStripe\ORM\DataExtension;
  * @property \gorriecoe\Menu\Models\MenuLink|\Netwerkstatt\Site\Extension\DisableMenuLink $owner
  * @property bool $Enabled
  */
-class DisableMenuLink extends DataExtension
+class DisableMenuLink extends \SilverStripe\Core\Extension
 {
     /**
      * @config

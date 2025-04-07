@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "71029a92e4f5a9391d97785126fbb364",
+    "content-hash": "19f6fd06245fd4e36654caee9170ab9a",
     "packages": [
         {
             "name": "composer/ca-bundle",
@@ -515,6 +515,60 @@
             "time": "2024-11-23T03:48:32+00:00"
         },
         {
+            "name": "dynamic/silverstripe-elemental-promos",
+            "version": "dev-silverstripe6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/wernerkrauss/silverstripe-elemental-promos.git",
+                "reference": "748bdef28500b734c925268e6235d9119cbef4c8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/wernerkrauss/silverstripe-elemental-promos/zipball/748bdef28500b734c925268e6235d9119cbef4c8",
+                "reference": "748bdef28500b734c925268e6235d9119cbef4c8",
+                "shasum": ""
+            },
+            "require": {
+                "dnadesign/silverstripe-elemental": "^6",
+                "dynamic/silverstripe-elemental-baseobject": "dev-silverstripe6 as 6.0",
+                "jonom/focuspoint": "dev-silverstripe6 as 6.0"
+            },
+            "require-dev": {
+                "silverstripe/recipe-testing": "^4"
+            },
+            "type": "silverstripe-vendormodule",
+            "autoload": {
+                "psr-4": {
+                    "Dynamic\\Elements\\Promos\\": "src/",
+                    "Dynamic\\Elements\\Promos\\Tests\\": "tests/"
+                }
+            },
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Dynamic",
+                    "email": "dev@dynamicagency.com",
+                    "homepage": "https://www.dynamicagency.com"
+                }
+            ],
+            "description": "A block to display a group of promo objects - a small card with an image, headline, short description, and link.",
+            "keywords": [
+                "blocks",
+                "card",
+                "content",
+                "elemental",
+                "promo",
+                "silverstripe",
+                "spiff"
+            ],
+            "support": {
+                "source": "https://github.com/wernerkrauss/silverstripe-elemental-promos/tree/silverstripe6"
+            },
+            "time": "2025-04-07T10:44:34+00:00"
+        },
+        {
             "name": "egulias/email-validator",
             "version": "4.0.4",
             "source": {
@@ -997,16 +1051,16 @@
         },
         {
             "name": "intervention/gif",
-            "version": "4.2.1",
+            "version": "4.2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Intervention/gif.git",
-                "reference": "6addac2c68b4bc0e37d0d3ccedda57eb84729c49"
+                "reference": "5999eac6a39aa760fb803bc809e8909ee67b451a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Intervention/gif/zipball/6addac2c68b4bc0e37d0d3ccedda57eb84729c49",
-                "reference": "6addac2c68b4bc0e37d0d3ccedda57eb84729c49",
+                "url": "https://api.github.com/repos/Intervention/gif/zipball/5999eac6a39aa760fb803bc809e8909ee67b451a",
+                "reference": "5999eac6a39aa760fb803bc809e8909ee67b451a",
                 "shasum": ""
             },
             "require": {
@@ -1014,7 +1068,7 @@
             },
             "require-dev": {
                 "phpstan/phpstan": "^2.1",
-                "phpunit/phpunit": "^10.0 || ^11.0",
+                "phpunit/phpunit": "^10.0 || ^11.0  || ^12.0",
                 "slevomat/coding-standard": "~8.0",
                 "squizlabs/php_codesniffer": "^3.8"
             },
@@ -1045,7 +1099,7 @@
             ],
             "support": {
                 "issues": "https://github.com/Intervention/gif/issues",
-                "source": "https://github.com/Intervention/gif/tree/4.2.1"
+                "source": "https://github.com/Intervention/gif/tree/4.2.2"
             },
             "funding": [
                 {
@@ -1061,7 +1115,7 @@
                     "type": "ko_fi"
                 }
             ],
-            "time": "2025-01-05T10:52:39+00:00"
+            "time": "2025-03-29T07:46:21+00:00"
         },
         {
             "name": "intervention/image",
@@ -8423,16 +8477,16 @@
         },
         {
             "name": "squizlabs/php_codesniffer",
-            "version": "3.12.0",
+            "version": "3.12.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PHPCSStandards/PHP_CodeSniffer.git",
-                "reference": "2d1b63db139c3c6ea0c927698e5160f8b3b8d630"
+                "reference": "ea16a1f3719783345febd3aab41beb55c8c84bfd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PHPCSStandards/PHP_CodeSniffer/zipball/2d1b63db139c3c6ea0c927698e5160f8b3b8d630",
-                "reference": "2d1b63db139c3c6ea0c927698e5160f8b3b8d630",
+                "url": "https://api.github.com/repos/PHPCSStandards/PHP_CodeSniffer/zipball/ea16a1f3719783345febd3aab41beb55c8c84bfd",
+                "reference": "ea16a1f3719783345febd3aab41beb55c8c84bfd",
                 "shasum": ""
             },
             "require": {
@@ -8503,7 +8557,7 @@
                     "type": "thanks_dev"
                 }
             ],
-            "time": "2025-03-18T05:04:51+00:00"
+            "time": "2025-04-04T12:57:55+00:00"
         },
         {
             "name": "staabm/side-effects-detector",
@@ -8715,6 +8769,30 @@
     ],
     "aliases": [
         {
+            "package": "dynamic/silverstripe-elemental-baseobject",
+            "version": "dev-silverstripe6",
+            "alias": "6.0",
+            "alias_normalized": "6.0.0.0"
+        },
+        {
+            "package": "dynamic/silverstripe-elemental-promos",
+            "version": "dev-silverstripe6",
+            "alias": "6.0",
+            "alias_normalized": "6.0.0.0"
+        },
+        {
+            "package": "jonom/focuspoint",
+            "version": "dev-silverstripe6",
+            "alias": "6.0",
+            "alias_normalized": "6.0.0.0"
+        },
+        {
+            "package": "jonom/silverstripe-betternavigator",
+            "version": "dev-wernerkrauss-ss6",
+            "alias": "6.2",
+            "alias_normalized": "6.2.0.0"
+        },
+        {
             "package": "wernerkrauss/silverstripe-rector",
             "version": "dev-main",
             "alias": "0.1.2",
@@ -8725,6 +8803,7 @@
     "stability-flags": {
         "cambis/silverstan": 20,
         "dynamic/silverstripe-elemental-baseobject": 20,
+        "dynamic/silverstripe-elemental-promos": 20,
         "jonom/focuspoint": 20,
         "jonom/silverstripe-betternavigator": 20,
         "silverstripe/framework": 10,

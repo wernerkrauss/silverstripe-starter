@@ -88,7 +88,7 @@ class Video extends BaseElement
         $blockSchema = [];
         try {
             $blockSchema = parent::provideBlockSchema();
-        } catch (SchemaBuilderException|ValidationException) {
+        } catch (SchemaBuilderException|\SilverStripe\Core\Validation\ValidationException) {
         }
 
         $blockSchema['content'] = $this->getSummary();

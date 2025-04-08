@@ -2652,12 +2652,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/wernerkrauss/silverstripe-hasonefield.git",
-                "reference": "c9bf90cbc372dccde3a82ddd6790cd3c467f5f17"
+                "reference": "941f40046476680b30634bc9f8451b7db885cb75"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wernerkrauss/silverstripe-hasonefield/zipball/c9bf90cbc372dccde3a82ddd6790cd3c467f5f17",
-                "reference": "c9bf90cbc372dccde3a82ddd6790cd3c467f5f17",
+                "url": "https://api.github.com/repos/wernerkrauss/silverstripe-hasonefield/zipball/941f40046476680b30634bc9f8451b7db885cb75",
+                "reference": "941f40046476680b30634bc9f8451b7db885cb75",
                 "shasum": ""
             },
             "require": {
@@ -2690,7 +2690,7 @@
             "support": {
                 "source": "https://github.com/wernerkrauss/silverstripe-hasonefield/tree/silverstripe6"
             },
-            "time": "2025-03-28T14:07:49+00:00"
+            "time": "2025-04-08T08:40:00+00:00"
         },
         {
             "name": "silverstripe/admin",

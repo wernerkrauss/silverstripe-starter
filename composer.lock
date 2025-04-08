@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "19f6fd06245fd4e36654caee9170ab9a",
+    "content-hash": "e758b629d31d202515e85268dfd535f9",
     "packages": [
         {
             "name": "composer/ca-bundle",
@@ -723,6 +723,61 @@
                 }
             ],
             "time": "2025-01-02T16:53:09+00:00"
+        },
+        {
+            "name": "fractas/elemental-stylings",
+            "version": "dev-silverstripe6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/wernerkrauss/silverstripe-elemental-stylings.git",
+                "reference": "d809bc073072c359f3a50a7f4e7d1531cd754e34"
+            },
+            "require": {
+                "dnadesign/silverstripe-elemental": "^6",
+                "php": "^8.3",
+                "silverstripe/vendor-plugin": "^3"
+            },
+            "type": "silverstripe-vendormodule",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.x-dev"
+                },
+                "expose": [
+                    "client/dist"
+                ]
+            },
+            "autoload": {
+                "psr-4": {
+                    "Fractas\\ElementalStylings\\": "src/"
+                }
+            },
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Milan Jelicanin",
+                    "email": "milan.jelicanin@fractas.com"
+                },
+                {
+                    "name": "Petar Simic",
+                    "email": "petar.simic@fractas.com"
+                }
+            ],
+            "description": "Collection of useful and reusable SilverStripe Elemental stylings properties",
+            "homepage": "http://github.com/fractaslabs/silverstripe-elemental-stylings",
+            "keywords": [
+                "content blocks",
+                "content management",
+                "elemental",
+                "silverstripe",
+                "silverstripe elemental",
+                "styling"
+            ],
+            "support": {
+                "issues": "http://github.com/fractaslabs/silverstripe-elemental-stylings/issues"
+            },
+            "time": "2025-04-08T08:22:46+00:00"
         },
         {
             "name": "guzzlehttp/guzzle",
@@ -8781,6 +8836,12 @@
             "alias_normalized": "6.0.0.0"
         },
         {
+            "package": "fractas/elemental-stylings",
+            "version": "dev-silverstripe6",
+            "alias": "2.0",
+            "alias_normalized": "2.0.0.0"
+        },
+        {
             "package": "jonom/focuspoint",
             "version": "dev-silverstripe6",
             "alias": "6.0",
@@ -8804,6 +8865,7 @@
         "cambis/silverstan": 20,
         "dynamic/silverstripe-elemental-baseobject": 20,
         "dynamic/silverstripe-elemental-promos": 20,
+        "fractas/elemental-stylings": 20,
         "jonom/focuspoint": 20,
         "jonom/silverstripe-betternavigator": 20,
         "silverstripe/framework": 10,

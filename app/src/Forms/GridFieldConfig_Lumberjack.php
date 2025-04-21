@@ -6,7 +6,7 @@ use SilverStripe\Forms\GridField\GridField_ActionMenu;
 use SilverStripe\Forms\GridField\GridFieldDetailForm;
 use Symbiote\GridFieldExtensions\GridFieldOrderableRows;
 
-if (!class_exists('\SilverStripe\Lumberjack\Forms\GridFieldConfig_Lumberjack')) {
+if (!class_exists(\SilverStripe\Lumberjack\Forms\GridFieldConfig_Lumberjack::class)) {
     return;
 }
 

@@ -1,5 +1,6 @@
 ---
 Name: myproject
+After: basic-gallery-extension
 ---
 SilverStripe\Core\Manifest\ModuleManifest:
   project: app
@@ -9,6 +10,10 @@ SilverStripe\i18n\i18n:
 
 SilverStripe\CMS\Model\SiteTree:
   create_default_pages: false
+
+##testing
+#PurpleSpider\BasicGalleryExtension\PhotoGalleryImage:
+#  ondelete_delete_image_files: true
 
 # UTF8MB4 has limited support in older MySQL versions.
 # Remove this configuration if you experience issues.

@@ -34,24 +34,7 @@
     {
       "type": "vcs",
       "url": "git@github.com:dynamic/silverstripe-display-logic.git"
-    },
-    {
-      "type": "vcs",
-      "url":"https://github.com/wernerkrauss/silverstripe-elemental-stylings.git"
-    },
-    {
-      "type": "git",
-      "url": "git@github.com:wernerkrauss/asset-delete-if-unused-extension.git"
-    },
-    {
-      "type": "git",
-      "url": "git@github.com:wernerkrauss/silverstripe-basic-gallery-extension.git"
-    },
-    {
-      "type": "git",
-      "url": "git@github.com:wernerkrauss/silverstripe-elemental-basic-gallery.git"
     }
-
   ],
   "require": {
     "php": "^8.3",
@@ -68,9 +51,7 @@
     "jonom/focuspoint": "dev-silverstripe6 as 6.0",
     "fractas/elemental-stylings": "dev-silverstripe6 as 2.0",
     "silverstripe/lumberjack": "^4",
-    "purplespider/silverstripe-asset-delete-if-unused-extension": "dev-silverstripe6 as 2.0",
-    "purplespider/silverstripe-basic-gallery-extension": "dev-silverstripe6 as 5.0",
-    "purplespider/silverstripe-elemental-basic-gallery": "dev-silverstripe6 as 4.0"
+    "purplespider/silverstripe-elemental-basic-gallery": "4.0"
   },
   "require-dev": {
     "phpunit/phpunit": "^11.3",

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "85892a69bbf547f87127568944cd35da",
+    "content-hash": "fac1ea422ac01d07380045bcdc794a25",
     "packages": [
         {
             "name": "colymba/gridfield-bulk-editing-tools",
@@ -2610,16 +2610,23 @@
         },
         {
             "name": "purplespider/silverstripe-asset-delete-if-unused-extension",
-            "version": "dev-silverstripe6",
+            "version": "2.0.0",
             "source": {
                 "type": "git",
-                "url": "git@github.com:wernerkrauss/asset-delete-if-unused-extension.git",
-                "reference": "3144a4726008bf43af9e08fdb67e298a8c708fb7"
+                "url": "https://github.com/purplespider/asset-delete-if-unused-extension.git",
+                "reference": "6c912ce5934ad1c5874d6d56710d90b6ad1e1004"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/purplespider/asset-delete-if-unused-extension/zipball/6c912ce5934ad1c5874d6d56710d90b6ad1e1004",
+                "reference": "6c912ce5934ad1c5874d6d56710d90b6ad1e1004",
+                "shasum": ""
             },
             "require": {
                 "silverstripe/cms": "^6"
             },
             "type": "silverstripe-vendormodule",
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "BSD-3-Clause"
             ],
@@ -2636,17 +2643,24 @@
                 "silverstripe"
             ],
             "support": {
-                "issues": "http://github.com/purplespider/silverstripe-asset-delete-if-unused-extension/issues"
+                "issues": "http://github.com/purplespider/silverstripe-asset-delete-if-unused-extension/issues",
+                "source": "https://github.com/purplespider/asset-delete-if-unused-extension/tree/2.0.0"
             },
-            "time": "2025-04-21T15:35:29+00:00"
+            "time": "2025-04-22T12:21:57+00:00"
         },
         {
             "name": "purplespider/silverstripe-basic-gallery-extension",
-            "version": "dev-silverstripe6",
+            "version": "5.0.0",
             "source": {
                 "type": "git",
-                "url": "git@github.com:wernerkrauss/silverstripe-basic-gallery-extension.git",
-                "reference": "2cf404274f43f65013209552a8b0750f0be4a69a"
+                "url": "https://github.com/purplespider/silverstripe-basic-gallery-extension.git",
+                "reference": "f732b25fc89eb2aed04ed854b50681ff63da51fd"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/purplespider/silverstripe-basic-gallery-extension/zipball/f732b25fc89eb2aed04ed854b50681ff63da51fd",
+                "reference": "f732b25fc89eb2aed04ed854b50681ff63da51fd",
+                "shasum": ""
             },
             "require": {
                 "colymba/gridfield-bulk-editing-tools": "^5",
@@ -2662,6 +2676,7 @@
                     "client/dist"
                 ]
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "BSD-3-Clause"
             ],
@@ -2682,17 +2697,24 @@
                 "silverstripe"
             ],
             "support": {
-                "issues": "https://github.com/purplespider/silverstripe-basic-gallery-extension/issues"
+                "issues": "https://github.com/purplespider/silverstripe-basic-gallery-extension/issues",
+                "source": "https://github.com/purplespider/silverstripe-basic-gallery-extension/tree/5.0.0"
             },
-            "time": "2025-04-21T15:38:28+00:00"
+            "time": "2025-04-22T12:21:28+00:00"
         },
         {
             "name": "purplespider/silverstripe-elemental-basic-gallery",
-            "version": "dev-silverstripe6",
+            "version": "4.0.0",
             "source": {
                 "type": "git",
-                "url": "git@github.com:wernerkrauss/silverstripe-elemental-basic-gallery.git",
-                "reference": "fdb0629ecf3ff5f9683d3f0b67895acbb8d47364"
+                "url": "https://github.com/purplespider/silverstripe-elemental-basic-gallery.git",
+                "reference": "393b01d298a3a6704944f034d654720f33ca05f7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/purplespider/silverstripe-elemental-basic-gallery/zipball/393b01d298a3a6704944f034d654720f33ca05f7",
+                "reference": "393b01d298a3a6704944f034d654720f33ca05f7",
+                "shasum": ""
             },
             "require": {
                 "dnadesign/silverstripe-elemental": "^6",
@@ -2701,6 +2723,7 @@
                 "silverstripe/framework": "^6"
             },
             "type": "silverstripe-vendormodule",
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "BSD-3-Clause"
             ],
@@ -2720,9 +2743,10 @@
                 "silverstripe"
             ],
             "support": {
-                "issues": "https://github.com/purplespider/silverstripe-basic-galleries/issues"
+                "issues": "https://github.com/purplespider/silverstripe-basic-galleries/issues",
+                "source": "https://github.com/purplespider/silverstripe-elemental-basic-gallery/tree/4.0.0"
             },
-            "time": "2025-04-21T15:58:07+00:00"
+            "time": "2025-04-22T12:20:10+00:00"
         },
         {
             "name": "ralouphie/getallheaders",
@@ -7369,16 +7393,16 @@
         },
         {
             "name": "phpstan/phpstan",
-            "version": "1.12.23",
+            "version": "1.12.24",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpstan.git",
-                "reference": "29201e7a743a6ab36f91394eab51889a82631428"
+                "reference": "338b92068f58d9f8035b76aed6cf2b9e5624c025"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/29201e7a743a6ab36f91394eab51889a82631428",
-                "reference": "29201e7a743a6ab36f91394eab51889a82631428",
+                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/338b92068f58d9f8035b76aed6cf2b9e5624c025",
+                "reference": "338b92068f58d9f8035b76aed6cf2b9e5624c025",
                 "shasum": ""
             },
             "require": {
@@ -7423,7 +7447,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-03-23T14:57:32+00:00"
+            "time": "2025-04-16T13:01:53+00:00"
         },
         {
             "name": "phpunit/php-code-coverage",
@@ -7750,16 +7774,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "11.5.17",
+            "version": "11.5.18",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "fd2e863a2995cdfd864fb514b5e0b28b09895b5c"
+                "reference": "fc3e887c7f3f9917e1bf61e523413d753db00a17"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/fd2e863a2995cdfd864fb514b5e0b28b09895b5c",
-                "reference": "fd2e863a2995cdfd864fb514b5e0b28b09895b5c",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/fc3e887c7f3f9917e1bf61e523413d753db00a17",
+                "reference": "fc3e887c7f3f9917e1bf61e523413d753db00a17",
                 "shasum": ""
             },
             "require": {
@@ -7831,7 +7855,7 @@
             "support": {
                 "issues": "https://github.com/sebastianbergmann/phpunit/issues",
                 "security": "https://github.com/sebastianbergmann/phpunit/security/policy",
-                "source": "https://github.com/sebastianbergmann/phpunit/tree/11.5.17"
+                "source": "https://github.com/sebastianbergmann/phpunit/tree/11.5.18"
             },
             "funding": [
                 {
@@ -7843,11 +7867,19 @@
                     "type": "github"
                 },
                 {
+                    "url": "https://liberapay.com/sebastianbergmann",
+                    "type": "liberapay"
+                },
+                {
+                    "url": "https://thanks.dev/u/gh/sebastianbergmann",
+                    "type": "thanks_dev"
+                },
+                {
                     "url": "https://tidelift.com/funding/github/packagist/phpunit/phpunit",
                     "type": "tidelift"
                 }
             ],
-            "time": "2025-04-08T07:59:11+00:00"
+            "time": "2025-04-22T06:09:49+00:00"
         },
         {
             "name": "rector/rector",
@@ -8769,16 +8801,16 @@
         },
         {
             "name": "squizlabs/php_codesniffer",
-            "version": "3.12.1",
+            "version": "3.12.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PHPCSStandards/PHP_CodeSniffer.git",
-                "reference": "ea16a1f3719783345febd3aab41beb55c8c84bfd"
+                "reference": "6d4cf6032d4b718f168c90a96e36c7d0eaacb2aa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PHPCSStandards/PHP_CodeSniffer/zipball/ea16a1f3719783345febd3aab41beb55c8c84bfd",
-                "reference": "ea16a1f3719783345febd3aab41beb55c8c84bfd",
+                "url": "https://api.github.com/repos/PHPCSStandards/PHP_CodeSniffer/zipball/6d4cf6032d4b718f168c90a96e36c7d0eaacb2aa",
+                "reference": "6d4cf6032d4b718f168c90a96e36c7d0eaacb2aa",
                 "shasum": ""
             },
             "require": {
@@ -8849,7 +8881,7 @@
                     "type": "thanks_dev"
                 }
             ],
-            "time": "2025-04-04T12:57:55+00:00"
+            "time": "2025-04-13T04:10:18+00:00"
         },
         {
             "name": "staabm/side-effects-detector",
@@ -9091,24 +9123,6 @@
             "alias_normalized": "6.2.0.0"
         },
         {
-            "package": "purplespider/silverstripe-asset-delete-if-unused-extension",
-            "version": "dev-silverstripe6",
-            "alias": "2.0",
-            "alias_normalized": "2.0.0.0"
-        },
-        {
-            "package": "purplespider/silverstripe-basic-gallery-extension",
-            "version": "dev-silverstripe6",
-            "alias": "5.0",
-            "alias_normalized": "5.0.0.0"
-        },
-        {
-            "package": "purplespider/silverstripe-elemental-basic-gallery",
-            "version": "dev-silverstripe6",
-            "alias": "4.0",
-            "alias_normalized": "4.0.0.0"
-        },
-        {
             "package": "wernerkrauss/silverstripe-rector",
             "version": "dev-main",
             "alias": "0.1.2",
@@ -9123,9 +9137,6 @@
         "fractas/elemental-stylings": 20,
         "jonom/focuspoint": 20,
         "jonom/silverstripe-betternavigator": 20,
-        "purplespider/silverstripe-asset-delete-if-unused-extension": 20,
-        "purplespider/silverstripe-basic-gallery-extension": 20,
-        "purplespider/silverstripe-elemental-basic-gallery": 20,
         "silverstripe/framework": 10,
         "wernerkrauss/silverstripe-rector": 20
     },

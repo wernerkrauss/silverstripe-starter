@@ -2,9 +2,9 @@
 
 namespace Netwerkstatt\Site\Extension;
 
+use SilverStripe\Core\Extension;
 use SilverStripe\Forms\CheckboxField;
 use SilverStripe\Forms\FieldList;
-use SilverStripe\ORM\DataExtension;
 
 /**
  * Class \Netwerkstatt\Site\Extension\DisableMenuLink
@@ -12,7 +12,7 @@ use SilverStripe\ORM\DataExtension;
  * @property \gorriecoe\Menu\Models\MenuLink|\Netwerkstatt\Site\Extension\DisableMenuLink $owner
  * @property bool $Enabled
  */
-class DisableMenuLink extends \SilverStripe\Core\Extension
+class DisableMenuLink extends Extension
 {
     /**
      * @config

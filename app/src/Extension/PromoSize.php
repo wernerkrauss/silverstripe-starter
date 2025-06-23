@@ -2,6 +2,8 @@
 
 namespace Netwerkstatt\Site\Extension;
 
+use SilverStripe\Core\Extension;
+use Dynamic\Elements\Promos\Elements\ElementPromos;
 use SilverStripe\Forms\DropdownField;
 use SilverStripe\Forms\FieldList;
 use SilverStripe\Forms\GridField\GridField;
@@ -11,9 +13,9 @@ use Symbiote\GridFieldExtensions\GridFieldEditableColumns;
 /**
  * Class \Netwerkstatt\Site\Extension\PromoSize
  *
- * @property \Dynamic\Elements\Promos\Elements\ElementPromos|\Netwerkstatt\Site\Extension\PromoSize $owner
+ * @property ElementPromos|\Netwerkstatt\Site\Extension\PromoSize $owner
  */
-class PromoSize extends \SilverStripe\Core\Extension
+class PromoSize extends Extension
 {
     /**
      * @config

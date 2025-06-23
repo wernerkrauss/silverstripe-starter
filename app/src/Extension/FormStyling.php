@@ -2,6 +2,9 @@
 
 namespace Netwerkstatt\Site\Extension;
 
+use SilverStripe\Core\Extension;
+use SilverStripe\Forms\Form;
+
 /**
  * Class \Netwerkstatt\Site\Extension\FormStyling
  *
@@ -10,9 +13,9 @@ namespace Netwerkstatt\Site\Extension;
 /**
  * Class \Netwerkstatt\Site\Extension\FormStyling
  *
- * @property \SilverStripe\Forms\Form|\Netwerkstatt\Site\Extension\FormStyling $owner
+ * @property Form|\Netwerkstatt\Site\Extension\FormStyling $owner
  */
-class FormStyling extends \SilverStripe\Core\Extension
+class FormStyling extends Extension
 {
     protected $fieldSetClasses = [];
 

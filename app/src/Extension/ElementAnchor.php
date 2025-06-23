@@ -2,18 +2,19 @@
 
 namespace Netwerkstatt\Site\Extension;
 
+use SilverStripe\Core\Extension;
+use DNADesign\Elemental\Models\BaseElement;
 use SilverStripe\Forms\FieldList;
 use SilverStripe\Forms\TextField;
-use SilverStripe\ORM\DataExtension;
 use SilverStripe\View\Parsers\URLSegmentFilter;
 
 /**
  * Class \Netwerkstatt\Site\Extension\ElementAnchor
  *
- * @property \DNADesign\Elemental\Models\BaseElement|\Netwerkstatt\Site\Extension\ElementAnchor $owner
+ * @property BaseElement|\Netwerkstatt\Site\Extension\ElementAnchor $owner
  * @property string $AnchorName
  */
-class ElementAnchor extends \SilverStripe\Core\Extension
+class ElementAnchor extends Extension
 {
     /**
      * @config

@@ -2,8 +2,6 @@
 
 use SilverStripe\Admin\CMSMenu;
 use SilverStripe\CampaignAdmin\CampaignAdmin;
-use SilverStripe\Security\PasswordValidator;
-use SilverStripe\Security\Member;
 
 //// remove PasswordValidator for SilverStripe 5.0
 //$validator = PasswordValidator::create();

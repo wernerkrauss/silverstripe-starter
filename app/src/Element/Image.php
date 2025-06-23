@@ -2,13 +2,14 @@
 
 namespace Netwerkstatt\Site\Element;
 
+use SilverStripe\Core\Validation\ValidationException;
+use Override;
 use SilverStripe\AssetAdmin\Forms\UploadField;
 use SilverStripe\Assets\Image as SSImage;
 use DNADesign\Elemental\Models\BaseElement;
 use SilverStripe\Forms\FieldList;
 use SilverStripe\GraphQL\Schema\Exception\SchemaBuilderException;
 use SilverStripe\ORM\FieldType\DBField;
-use SilverStripe\ORM\ValidationException;
 
 class Image extends BaseElement
 {
@@ -66,10 +67,10 @@ class Image extends BaseElement
      */
     private static bool $inline_editable = false;
 
-    #[\Override]
+    #[Override]
     public function getCMSFields(): FieldList
     {
-        $this->beforeUpdateCMSFields(function (FieldList $fields) {
+        $this->beforeUpdateCMSFields(function (FieldList $fields): void {
             $imageField = $fields->fieldByName('Root.Main.Image')
                 ?->setFolderName('Uploads/ElementImage')
                 ?->setAllowedFileCategories('image');
@@ -82,7 +83,7 @@ class Image extends BaseElement
     }
 
 
-    #[\Override]
+    #[Override]
     public function getSummary(): string
     {
         if ($this->Image()->exists()) {
@@ -93,13 +94,13 @@ class Image extends BaseElement
         return parent::getSummary();
     }
 
-    #[\Override]
+    #[Override]
     protected function provideBlockSchema(): array
     {
         $blockSchema = [];
         try {
             $blockSchema = parent::provideBlockSchema();
-        } catch (SchemaBuilderException|\SilverStripe\Core\Validation\ValidationException) {
+        } catch (SchemaBuilderException|ValidationException) {
         }
 
         $blockSchema['content'] = $this->getSummary();
@@ -107,7 +108,7 @@ class Image extends BaseElement
         return $blockSchema;
     }
 
-    #[\Override]
+    #[Override]
     public function getType(): string
     {
         return _t(self::class . '.BlockType', 'Image');

@@ -2,6 +2,9 @@
 
 namespace Netwerkstatt\Site\Page;
 
+use Page;
+use Override;
+use DNADesign\Elemental\Models\ElementalArea;
 use DNADesign\Elemental\Extensions\ElementalPageExtension;
 use SilverStripe\Forms\FieldList;
 use SilverStripe\Forms\LiteralField;
@@ -11,10 +14,10 @@ use TractorCow\Fluent\Model\Locale;
  * Class \Netwerkstatt\Site\Page\BlockPage
  *
  * @property int $ElementalAreaID
- * @method \DNADesign\Elemental\Models\ElementalArea ElementalArea()
- * @mixin \DNADesign\Elemental\Extensions\ElementalPageExtension
+ * @method ElementalArea ElementalArea()
+ * @mixin ElementalPageExtension
  */
-class BlockPage extends \Page
+class BlockPage extends Page
 {
     /**
      * @var string
@@ -36,7 +39,7 @@ class BlockPage extends \Page
         ElementalPageExtension::class
     ];
 
-    #[\Override]
+    #[Override]
     protected function onBeforeWrite(): void
     {
         parent::onBeforeWrite();
@@ -47,7 +50,7 @@ class BlockPage extends \Page
         }
     }
 
-    #[\Override]
+    #[Override]
     public function getCMSFields(): FieldList
     {
         $fields = parent::getCMSFields();

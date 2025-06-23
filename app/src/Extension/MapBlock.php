@@ -3,6 +3,7 @@
 
 namespace Netwerkstatt\Site\Extension;
 
+use SilverStripe\Core\Extension;
 use Bigfork\SilverStripeMapboxField\MapboxField;
 use EdgarIndustries\ElementalMap\Provider\Mapbox;
 use SilverStripe\Forms\FieldGroup;
@@ -10,7 +11,6 @@ use SilverStripe\Forms\FieldList;
 use SilverStripe\Forms\GridField\GridField;
 use SilverStripe\Forms\HiddenField;
 use SilverStripe\Forms\TextField;
-use SilverStripe\ORM\DataExtension;
 use Symbiote\GridFieldExtensions\GridFieldOrderableRows;
 
 /**
@@ -18,7 +18,7 @@ use Symbiote\GridFieldExtensions\GridFieldOrderableRows;
  *
  * @property \Netwerkstatt\Site\Extension\MapBlock $owner
  */
-class MapBlock extends \SilverStripe\Core\Extension
+class MapBlock extends Extension
 {
 
     /**

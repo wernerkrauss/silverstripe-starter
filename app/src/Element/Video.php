@@ -2,10 +2,11 @@
 
 namespace Netwerkstatt\Site\Element;
 
+use SilverStripe\Core\Validation\ValidationException;
+use Override;
 use DNADesign\Elemental\Models\BaseElement;
 use SilverStripe\Forms\FieldList;
 use SilverStripe\GraphQL\Schema\Exception\SchemaBuilderException;
-use SilverStripe\ORM\ValidationException;
 
 /**
  * Class \Netwerkstatt\Site\Element\Video
@@ -66,29 +67,29 @@ class Video extends BaseElement
      */
     private static $inline_editable = false;
 
-    #[\Override]
+    #[Override]
     public function getCMSFields(): FieldList
     {
-        $this->beforeUpdateCMSFields(static function (FieldList $fields) {
+        $this->beforeUpdateCMSFields(static function (FieldList $fields): void {
         });
 
         return parent::getCMSFields();
     }
 
 
-    #[\Override]
+    #[Override]
     public function getSummary(): string
     {
         return 'Video';
     }
 
-    #[\Override]
+    #[Override]
     protected function provideBlockSchema(): array
     {
         $blockSchema = [];
         try {
             $blockSchema = parent::provideBlockSchema();
-        } catch (SchemaBuilderException|\SilverStripe\Core\Validation\ValidationException) {
+        } catch (SchemaBuilderException|ValidationException) {
         }
 
         $blockSchema['content'] = $this->getSummary();
@@ -96,7 +97,7 @@ class Video extends BaseElement
         return $blockSchema;
     }
 
-    #[\Override]
+    #[Override]
     public function getType(): string
     {
         return _t(self::class . '.BlockType', 'Video');

@@ -2,17 +2,19 @@
 
 namespace {
 
+    use Override;
+    use Page;
     use SilverStripe\CMS\Controllers\ContentController;
     use SilverStripe\CMS\Model\SiteTree;
     use SilverStripe\i18n\i18n;
 
     /**
- * Class \PageController
- *
- * @property \Page $dataRecord
- * @method \Page data()
- * @mixin \Page
- */
+     * Class \PageController
+     *
+     * @property Page $dataRecord
+     * @method Page data()
+     * @mixin Page
+     */
     class PageController extends ContentController
     {
         /**
@@ -33,7 +35,7 @@ namespace {
          */
         private static $allowed_actions = [];
 
-        #[\Override]
+        #[Override]
         protected function init()
         {
             parent::init();

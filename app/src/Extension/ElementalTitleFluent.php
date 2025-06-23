@@ -2,6 +2,8 @@
 
 namespace Netwerkstatt\Site\Extension;
 
+use DNADesign\Elemental\Models\BaseElement;
+use Dynamic\BaseObject\Model\BaseElementObject;
 use DNADesign\Elemental\Forms\TextCheckboxGroupField;
 use SilverStripe\Core\Extension;
 use SilverStripe\Forms\FieldList;
@@ -10,7 +12,7 @@ use TractorCow\Fluent\Extension\FluentExtension;
 /**
  * Class \Netwerkstatt\Site\Extension\ElementalTitleFluent
  *
- * @property \DNADesign\Elemental\Models\BaseElement|\Dynamic\BaseObject\Model\BaseElementObject|\Netwerkstatt\Site\Extension\ElementalTitleFluent $owner
+ * @property BaseElement|BaseElementObject|\Netwerkstatt\Site\Extension\ElementalTitleFluent $owner
  */
 class ElementalTitleFluent extends Extension
 {

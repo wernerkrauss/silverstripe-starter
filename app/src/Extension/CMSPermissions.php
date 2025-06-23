@@ -2,7 +2,8 @@
 
 namespace Netwerkstatt\Site\Extension;
 
-use SilverStripe\ORM\DataExtension;
+use SilverStripe\Core\Extension;
+use Override;
 use SilverStripe\Security\Permission;
 use SilverStripe\Security\PermissionProvider;
 
@@ -11,7 +12,7 @@ use SilverStripe\Security\PermissionProvider;
  *
  * @property \Netwerkstatt\Site\Extension\CMSPermissions $owner
  */
-class CMSPermissions extends \SilverStripe\Core\Extension implements PermissionProvider
+class CMSPermissions extends Extension implements PermissionProvider
 {
 
     /**
@@ -20,7 +21,7 @@ class CMSPermissions extends \SilverStripe\Core\Extension implements PermissionP
      *   'VIEW_SITE' => 'View the site',
      * );
      */
-    #[\Override]
+    #[Override]
     public function providePermissions(): array
     {
         return [

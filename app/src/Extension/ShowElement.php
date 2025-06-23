@@ -2,17 +2,18 @@
 
 namespace Netwerkstatt\Site\Extension;
 
+use SilverStripe\Core\Extension;
+use DNADesign\Elemental\Models\BaseElement;
 use SilverStripe\Forms\CheckboxField;
 use SilverStripe\Forms\FieldList;
-use SilverStripe\ORM\DataExtension;
 
 /**
  * Class \Netwerkstatt\Site\Extension\ShowElement
  *
- * @property \DNADesign\Elemental\Models\BaseElement|\Netwerkstatt\Site\Extension\ShowElement $owner
+ * @property BaseElement|\Netwerkstatt\Site\Extension\ShowElement $owner
  * @property bool $ShowElement
  */
-class ShowElement extends \SilverStripe\Core\Extension
+class ShowElement extends Extension
 {
     /**
      * @config

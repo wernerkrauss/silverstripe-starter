@@ -2,16 +2,11 @@
 
 namespace Netwerkstatt\Site\Extension;
 
+use SilverStripe\Core\Extension;
 use Bigfork\SilverStripeMapboxField\MapboxField;
-use Netwerkstatt\Block\Events;
-use Netwerkstatt\Model\Event;
-use Nightjar\Slug\Slug;
-use PurpleSpider\BasicGalleryExtension\PhotoGalleryExtension;
 use SilverStripe\Forms\FieldList;
 use SilverStripe\Forms\HTMLEditor\HTMLEditorField;
 use SilverStripe\Forms\LiteralField;
-use SilverStripe\ORM\DataExtension;
-use TractorCow\Fluent\State\FluentState;
 
 /**
  * Class \Netwerkstatt\Site\Extension\MapMarker
@@ -19,7 +14,7 @@ use TractorCow\Fluent\State\FluentState;
  * @property \Netwerkstatt\Site\Extension\MapMarker $owner
  * @property string $Content
  */
-class MapMarker extends \SilverStripe\Core\Extension
+class MapMarker extends Extension
 {
     /**
      * @config

@@ -2,13 +2,14 @@
 
 namespace Netwerkstatt\Site\Extension;
 
+use SilverStripe\Forms\FormField;
 use SilverStripe\Core\Convert;
 use SilverStripe\Core\Extension;
 
 /**
  * Class \PGX\Shop\Extension\FormFieldHolderStyling
  *
- * @property \SilverStripe\Forms\FormField|\Netwerkstatt\Site\Extension\FormFieldHolderStyling $owner
+ * @property FormField|\Netwerkstatt\Site\Extension\FormFieldHolderStyling $owner
  */
 class FormFieldHolderStyling extends Extension
 {

@@ -50,7 +50,8 @@
     "silverstripe/htmleditor-tinymce": "^1",
     "purplespider/silverstripe-elemental-basic-gallery": "4.0",
     "atwx/silverstripe-vitehelper": "^1",
-    "wilr/silverstripe-googlesitemaps": "^4"
+    "wilr/silverstripe-googlesitemaps": "^4",
+    "pixelpoems/silverstripe-vanilla-cookieconsent": "^2"
   },
   "require-dev": {
     "phpunit/phpunit": "^11.3",

@@ -13,6 +13,7 @@
     $MetaTags(false)
     <% include Fonts %>
     <% include Favicons %>
+    <% include Pixelpoems\CookieConsent %>
 </head>
 <body class="bg-gray-300 text-gray-700 font-sans flex flex-col min-h-screen">
 

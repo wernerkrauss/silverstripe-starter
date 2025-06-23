@@ -12,7 +12,7 @@ database:
 use_dns_when_possible: true
 composer_version: "2"
 web_environment: []
-nodejs_version: "18"
+nodejs_version: "22"
 
 hooks:
     post-start:
@@ -23,6 +23,12 @@ hooks:
         # php modules and db model
         - exec: printf "\n\n****** run composer install ******\n\n" && bash -c 'composer install'
         - exec: printf "\n\n****** run dev/build flush ******\n\n" && bash -c 'sake dev/build flush=all'
+
+web_extra_exposed_ports:
+    - name: vite
+      container_port: 5173
+      http_port: 5172
+      https_port: 5173
 
 # Key features of DDEV's config.yaml:
 

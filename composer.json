@@ -34,7 +34,7 @@
   ],
   "require": {
     "php": "^8.4",
-    "silverstripe/framework": "~6.0.0@beta",
+    "silverstripe/framework": "^6",
     "silverstripe/recipe-cms": "^6",
     "silverstripe/sharedraftcontent": "^4",
     "tractorcow/silverstripe-fluent": "^8",
@@ -47,7 +47,9 @@
     "jonom/focuspoint": "dev-silverstripe6 as 6.0",
     "fractas/elemental-stylings": "dev-silverstripe6 as 2.0",
     "silverstripe/lumberjack": "^4",
-    "purplespider/silverstripe-elemental-basic-gallery": "4.0"
+    "silverstripe/htmleditor-tinymce": "^1",
+    "purplespider/silverstripe-elemental-basic-gallery": "4.0",
+    "atwx/silverstripe-vitehelper": "^1"
   },
   "require-dev": {
     "phpunit/phpunit": "^11.3",

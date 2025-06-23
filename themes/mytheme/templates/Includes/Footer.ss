@@ -1,4 +1,4 @@
-<footer class="site-footer w-full bg-blue-500 py-16 mt-auto grow-0 self-end">
+<footer class="site-footer w-full bg-red-500 py-16 mt-auto grow-0 self-end">
     <div class="container max-w-6xl mx-auto bg-green-500">
         <nav>
             <% cached $CurrentReadingMode, $CurrentUser.ID, $Locale, $MenuLink.max('LastEdited') %>

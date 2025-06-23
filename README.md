@@ -1,21 +1,45 @@
-# Silverstripe Starter
+# Netwerkstatt Silverstripe Starter
 
-Configure ddev:
+## Configure ddev:
 ```bash
 ddev config --project-name test
 ```
 
-Start ddev, install packages:
+## Start ddev, install packages:
+
+ddev runs composer install, dev/build and frontend install and build on startup.
+
 ```bash
 ddev start
+```
+If you want to run it manually, you can run:
+```bash
 ddev composer install
-ddev yarn --cwd=themes/mytheme install 
+ddev yarn --cwd=themes/mytheme  
 ddev yarn --cwd=themes/mytheme build 
 ```
+## Frontend settings
 
 You can rename the theme to your own theme name. 
 
-Populate fixtures:
+Please note, you also need to rename the paths to your theme in
+* ./ddev/config.yml (post-start-hook command)
+* app/config/theme.yml (ssviewer and vitehelper settings)
+
+This starter uses vite and tailwindcss for frontend. Vite comes with a dev server and hot reloading; start it with:
+
+```bash
+cd themes/mytheme
+yarn run dev
+```
+
+The vite dev server needs the current server name set in a ENV variable:
+
+```dotenv
+VITE_DEV_SERVER_URL="https://starter-ddev.ddev.site:5173/"
+```
+
+## Populate fixtures:
 ```bash
 ddev sake dev/tasks/PopulateTask
 ```
@@ -34,7 +58,7 @@ TODO: Adress/Contact Element
 ssh-copy-id user@yourserver
 ```
 
-Deploy Key zu github/gitlab repo hinzufügen
+Add the deploy key to your github or gitlab repository
 
 
 ### install composer
@@ -47,15 +71,15 @@ software install composer
 
 ```
 
-### deploy.php anpassen
+### configure deploy.php
 
 vendor/bin/dep deploy:setup
 
-* Webroot anpassen
-* DB anlegen
-* .env in /releases/ anlegen
-* SSL Zertifikat anlegen
-* HTTPS Weiterleitung einschalten
+* configure webroot
+* create database on the server
+* create .env in /releases/ 
+* add SSL certificate
+* switch https redirect on
 
 
 ### live deploy
@@ -63,7 +87,7 @@ vendor/bin/dep deploy:setup
 ```bash
 vendor/bin/dep deploy
 ```
-oder
+or
 ```bash
 ddev composer deploy
 ```

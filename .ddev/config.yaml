@@ -14,6 +14,16 @@ composer_version: "2"
 web_environment: []
 nodejs_version: "18"
 
+hooks:
+    post-start:
+        # frontend js and css
+        - exec: printf "\n\n****** run yarn ******\n\n" && bash -c 'yarn --cwd=themes/mytheme'
+        - exec: printf "\n\n****** run yarn build ******\n\n" && bash -c 'yarn --cwd=themes/mytheme build'
+
+        # php modules and db model
+        - exec: printf "\n\n****** run composer install ******\n\n" && bash -c 'composer install'
+        - exec: printf "\n\n****** run dev/build flush ******\n\n" && bash -c 'sake dev/build flush=all'
+
 # Key features of DDEV's config.yaml:
 
 # name: <projectname> # Name of the project, automatically provides

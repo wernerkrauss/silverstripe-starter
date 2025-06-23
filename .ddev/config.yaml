@@ -22,7 +22,7 @@ hooks:
 
         # php modules and db model
         - exec: printf "\n\n****** run composer install ******\n\n" && bash -c 'composer install'
-        - exec: printf "\n\n****** run dev/build flush ******\n\n" && bash -c 'sake dev/build flush=all'
+        - exec: printf "\n\n****** run dev/build flush ******\n\n" && bash -c 'sake db:build -f'
 
 web_extra_exposed_ports:
     - name: vite

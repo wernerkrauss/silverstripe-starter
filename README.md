@@ -39,18 +39,41 @@ The vite dev server needs the current server name set in a ENV variable:
 VITE_DEV_SERVER_URL="https://starter-ddev.ddev.site:5173/"
 ```
 
-## Populate fixtures:
+## Useful ddev Commands
+### Build Database
 ```bash
-ddev sake dev/tasks/PopulateTask
+ddev sake db:build -f
 ```
 
+### Run Silverstripe Tasks
+To get a list of tasks run
+```bash
+ddev sake tasks
+```
 
-TODO: ~~Image Block~~
-TODO: ssslug module for SS5 (map marker)
-TODO: map element and mapbox field for backend
-TODO: Silverstripe Piwik SS5
-TODO: Address Extension for SiteConfig - show in Address.ss
-TODO: Adress/Contact Element
+To get infos about a task run e.g.
+
+```bash
+ddev sake tasks:i18nTextCollectorTask -h
+```
+
+[//]: # (## Populate fixtures:)
+
+[//]: # (```bash)
+
+[//]: # (ddev sake dev/tasks/PopulateTask)
+
+[//]: # (```)
+
+
+## TODO
+1. [ ] ssslug module for SS6 (map marker)
+2. [ ] map element and mapbox field for backend
+3. [ ] Silverstripe Piwik SS6
+4. [ ] Address Extension for SiteConfig - show in Address.ss
+5. [ ] Adress/Contact Element
+6. [ ] implement ssshell and document usage
+7. [ ] cookieconsent default settings
 
 ## Deploy to hetzner
 ### copy ssh key

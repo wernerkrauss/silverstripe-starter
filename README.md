@@ -22,7 +22,7 @@ ddev yarn --cwd=themes/mytheme build
 
 You can rename the theme to your own theme name. 
 
-Please note, you also need to rename the paths to your theme in
+⚠️ Please note, **you also need to rename the paths to your theme in**
 * ./ddev/config.yml (post-start-hook command)
 * app/config/theme.yml (ssviewer and vitehelper settings)
 
@@ -30,7 +30,7 @@ This starter uses vite and tailwindcss for frontend. Vite comes with a dev serve
 
 ```bash
 cd themes/mytheme
-yarn run dev
+ddev yarn run dev
 ```
 
 The vite dev server needs the current server name set in a ENV variable:

@@ -3,7 +3,7 @@ import tailwindcss from '@tailwindcss/vite';
 
 // https://vitejs.dev/config/
 export default defineConfig(({command}) => {
-    const primary_url = process.env.DDEV_PRIMARY_URL || 'http://localhost';
+    const primary_url = process.env.DDEV_PRIMARY_URL_WITHOUT_PORT || 'http://localhost';
     const origin = primary_url.replace(/:\d+$/, "") + `:5173`;
     return {
         server: {
@@ -23,7 +23,7 @@ export default defineConfig(({command}) => {
         },
         // base: (command === 'build') ? '/_resources/themes/mytheme/dist/' : '/', // TODO: .env variable, only on build
         base: './',
-        publicDir: '/public',
+        // publicDir: '../../public',
         build: {
             // cssCodeSplit: false,
             outDir: './dist',
@@ -32,8 +32,8 @@ export default defineConfig(({command}) => {
             rollupOptions: {
                 input: {
                     'main.js': './src/javascript/index.js',
-                    'main.scss': './src/css/app.css',
-                    'editor.scss': './src/css/editor.css',
+                    'main.css': './src/css/app.css',
+                    'editor.css': './src/css/editor.css',
                 },
             },
         },

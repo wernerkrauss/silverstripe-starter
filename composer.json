@@ -59,7 +59,8 @@
     "wernerkrauss/silverstripe-rector": "^1",
     "phpstan/extension-installer": "^1.0",
     "cambis/silverstan": "^2",
-    "deployer/deployer": "^7"
+    "deployer/deployer": "^7",
+    "dnadesign/silverstripe-populate": "^4"
   },
   "extra": {
     "resources-dir": "_resources",

@@ -1,8 +1,12 @@
+DNADesign\Elemental\Forms\ElementalAreaConfig:
+  extensions:
+    gridConfig: App\Extensions\ElementalAreaConfig
+
 DNADesign\Elemental\Models\BaseElement:
   extensions:
-    - Netwerkstatt\Site\Extension\ElementAnchor
-    - Netwerkstatt\Site\Extension\ShowElement
-#    - Fractas\ElementalStylings\StylingSize
+    anchor: Netwerkstatt\Site\Extension\ElementAnchor
+    showhide: Netwerkstatt\Site\Extension\ShowElement
+#   size: Fractas\ElementalStylings\StylingSize
   size:
     default: default
   defaults:
@@ -28,7 +32,7 @@ Netwerkstatt\Site\Element\Video:
 
 Dynamic\Elements\Promos\Elements\ElementPromos:
   extensions:
-    - Netwerkstatt\Site\Extension\PromoSize
+    promosize: Netwerkstatt\Site\Extension\PromoSize
   styles:
     horizontal: Horizontal (nebeneinander)
     vertical: Vertical (untereinander, alternierend)

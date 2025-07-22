@@ -1,6 +1,6 @@
 DNADesign\Elemental\Forms\ElementalAreaConfig:
   extensions:
-    gridConfig: App\Extensions\ElementalAreaConfig
+    gridConfig: Netwerkstatt\Site\Extension\ElementalAreaConfig
 
 DNADesign\Elemental\Models\BaseElement:
   extensions:

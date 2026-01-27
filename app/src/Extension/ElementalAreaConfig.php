@@ -13,5 +13,4 @@ class ElementalAreaConfig extends Extension
         $this->getOwner()->addComponent(GridFieldPaginator::create());
         $this->getOwner()->getComponentByType(GridFieldDetailForm::class)->setShowPagination(true);
     }
-
 }

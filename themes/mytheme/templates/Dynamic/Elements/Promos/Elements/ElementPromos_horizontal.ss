@@ -1,7 +1,5 @@
 <div class="px-2 lg:px-0 my-10">
-    <% if $ShowTitle %>
-        <h2 class="text-primary-500 text-4xl mb-8">$Title</h2>
-    <% end_if %>
+    <% include Netwerkstatt\Site\Element\ElementHeading %>
     <% if $Content %>
         $Content
     <% end_if %>

@@ -9,6 +9,8 @@ use SilverStripe\Forms\FieldList;
 /**
  * Class \Netwerkstatt\Site\Extension\DisableMenuLink
  *
+ * @deprecated not needed any more with own SS6 menu module
+ *
  * @property \gorriecoe\Menu\Models\MenuLink|\Netwerkstatt\Site\Extension\DisableMenuLink $owner
  * @property bool $Enabled
  */

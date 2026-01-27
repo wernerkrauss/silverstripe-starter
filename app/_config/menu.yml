@@ -1,7 +1,7 @@
 ---
 Name: Site-menus
 ---
-
+#deprecated
 gorriecoe\Menu\Models\MenuLink:
   default_sort: Sort ASC
   extensions:

@@ -11,7 +11,7 @@ database:
     version: "10.4"
 use_dns_when_possible: true
 composer_version: "2"
-web_environment: []
+#web_environment: []
 nodejs_version: "22"
 
 hooks:
@@ -29,6 +29,9 @@ web_extra_exposed_ports:
       container_port: 5173
       http_port: 5172
       https_port: 5173
+
+web_environment:
+  - DDEV_VITE_DEVSERVER_PORT=5173
 
 # Key features of DDEV's config.yaml:
 

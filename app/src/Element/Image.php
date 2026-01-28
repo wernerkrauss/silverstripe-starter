@@ -2,14 +2,14 @@
 
 namespace Netwerkstatt\Site\Element;
 
-use SilverStripe\Core\Validation\ValidationException;
+use Exception;
+use DNADesign\Elemental\Models\BaseElement;
 use Override;
 use SilverStripe\AssetAdmin\Forms\UploadField;
 use SilverStripe\Assets\Image as SSImage;
-use DNADesign\Elemental\Models\BaseElement;
 use SilverStripe\Forms\FieldList;
-use SilverStripe\GraphQL\Schema\Exception\SchemaBuilderException;
 use SilverStripe\ORM\FieldType\DBField;
+use SilverStripe\ORM\FieldType\DBHTMLText;
 
 class Image extends BaseElement
 {
@@ -71,11 +71,11 @@ class Image extends BaseElement
     public function getCMSFields(): FieldList
     {
         $this->beforeUpdateCMSFields(function (FieldList $fields): void {
-            $imageField = $fields->fieldByName('Root.Main.Image')
-                ?->setFolderName('Uploads/ElementImage')
-                ?->setAllowedFileCategories('image');
+            $imageField = $fields->fieldByName('Root.Main.Image');
             if ($imageField instanceof UploadField) {
-                $imageField->setAllowedMaxFileNumber(1);
+                $imageField->setFolderName('Uploads/ElementImage')
+                    ->setAllowedFileCategories('image')
+                    ->setAllowedMaxFileNumber(1);
             }
         });
 
@@ -88,7 +88,11 @@ class Image extends BaseElement
     {
         if ($this->Image()->exists()) {
             $summary = implode(' - ', [$this->Image()->Name, $this->Caption]);
-            return DBField::create_field('HTMLText', $summary)->Summary(20);
+            
+            /** @var DBHTMLText $htmlField */
+            $htmlField = DBField::create_field(DBHTMLText::class, $summary);
+
+            return $htmlField->Summary(20);
         }
 
         return parent::getSummary();
@@ -100,7 +104,7 @@ class Image extends BaseElement
         $blockSchema = [];
         try {
             $blockSchema = parent::provideBlockSchema();
-        } catch (SchemaBuilderException|ValidationException) {
+        } catch (Exception) {
         }
 
         $blockSchema['content'] = $this->getSummary();

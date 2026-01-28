@@ -2,11 +2,10 @@
 
 namespace Netwerkstatt\Site\Element;
 
-use SilverStripe\Core\Validation\ValidationException;
-use Override;
 use DNADesign\Elemental\Models\BaseElement;
+use Override;
+use SilverStripe\Core\Validation\ValidationException;
 use SilverStripe\Forms\FieldList;
-use SilverStripe\GraphQL\Schema\Exception\SchemaBuilderException;
 
 /**
  * Class \Netwerkstatt\Site\Element\Video
@@ -89,7 +88,7 @@ class Video extends BaseElement
         $blockSchema = [];
         try {
             $blockSchema = parent::provideBlockSchema();
-        } catch (SchemaBuilderException|ValidationException) {
+        } catch (ValidationException) {
         }
 
         $blockSchema['content'] = $this->getSummary();

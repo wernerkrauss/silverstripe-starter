@@ -1,5 +1,5 @@
 includes:
-    - vendor/syntro/silverstripe-phpstan/phpstan.neon
+	- phpstan-baseline.neon
 
 parameters:
     level: 4

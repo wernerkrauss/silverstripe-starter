@@ -2,8 +2,8 @@
 
 namespace Netwerkstatt\Site\Element;
 
-use Exception;
 use DNADesign\Elemental\Models\BaseElement;
+use Exception;
 use Override;
 use SilverStripe\AssetAdmin\Forms\UploadField;
 use SilverStripe\Assets\Image as SSImage;
@@ -11,6 +11,11 @@ use SilverStripe\Forms\FieldList;
 use SilverStripe\ORM\FieldType\DBField;
 use SilverStripe\ORM\FieldType\DBHTMLText;
 
+
+/**
+ * @method SSImage Image()
+ * @phpstan-ignore annotations.method
+ */
 class Image extends BaseElement
 {
     /**
@@ -88,7 +93,7 @@ class Image extends BaseElement
     {
         if ($this->Image()->exists()) {
             $summary = implode(' - ', [$this->Image()->Name, $this->Caption]);
-            
+
             /** @var DBHTMLText $htmlField */
             $htmlField = DBField::create_field(DBHTMLText::class, $summary);
 
@@ -115,6 +120,6 @@ class Image extends BaseElement
     #[Override]
     public function getType(): string
     {
-        return _t(self::class . '.BlockType', 'Image');
+        return _t(Image::class . '.BlockType', 'Image');
     }
 }

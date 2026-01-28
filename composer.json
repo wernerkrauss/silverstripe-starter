@@ -30,6 +30,10 @@
     {
       "type": "vcs",
       "url": "git@github.com:dynamic/silverstripe-display-logic.git"
+    },
+    {
+      "type": "vcs",
+      "url": "git@github.com:wernerkrauss/silverstripe-standards.git"
     }
   ],
   "require": {
@@ -60,7 +64,8 @@
     "phpstan/extension-installer": "^1.0",
     "cambis/silverstan": "^2",
     "deployer/deployer": "^7",
-    "dnadesign/silverstripe-populate": "^4"
+    "dnadesign/silverstripe-populate": "^4",
+    "silverstripe/standards": "dev-wernerkrauss-patch-1"
   },
   "extra": {
     "resources-dir": "_resources",

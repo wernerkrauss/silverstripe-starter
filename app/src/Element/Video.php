@@ -99,6 +99,6 @@ class Video extends BaseElement
     #[Override]
     public function getType(): string
     {
-        return _t(self::class . '.BlockType', 'Video');
+        return _t(Video::class . '.BlockType', 'Video');
     }
 }

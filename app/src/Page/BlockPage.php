@@ -14,7 +14,7 @@ use TractorCow\Fluent\Model\Locale;
  * Class \Netwerkstatt\Site\Page\BlockPage
  *
  * @property int $ElementalAreaID
- * @method ElementalArea ElementalArea()
+// * @method ElementalArea ElementalArea()
  * @mixin ElementalPageExtension
  */
 class BlockPage extends Page

@@ -12,7 +12,7 @@ use TractorCow\Fluent\Extension\FluentExtension;
 /**
  * Class \Netwerkstatt\Site\Extension\ElementalTitleFluent
  *
- * @property BaseElement|BaseElementObject|\Netwerkstatt\Site\Extension\ElementalTitleFluent $owner
+ * @property BaseElement|BaseElementObject|ElementalTitleFluent $owner
  */
 class ElementalTitleFluent extends Extension
 {

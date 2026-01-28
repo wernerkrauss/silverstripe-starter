@@ -9,7 +9,7 @@ use SilverStripe\Core\Extension;
 /**
  * Class \PGX\Shop\Extension\FormFieldHolderStyling
  *
- * @property FormField|\Netwerkstatt\Site\Extension\FormFieldHolderStyling $owner
+ * @property FormField|FormFieldHolderStyling $owner
  */
 class FormFieldHolderStyling extends Extension
 {

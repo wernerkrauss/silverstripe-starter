@@ -10,7 +10,7 @@ use SilverStripe\Forms\FieldList;
 /**
  * Class \Netwerkstatt\Site\Extension\ShowElement
  *
- * @property BaseElement|\Netwerkstatt\Site\Extension\ShowElement $owner
+ * @property BaseElement|ShowElement $owner
  * @property bool $ShowElement
  */
 class ShowElement extends Extension

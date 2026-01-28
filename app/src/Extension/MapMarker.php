@@ -11,7 +11,7 @@ use SilverStripe\Forms\LiteralField;
 /**
  * Class \Netwerkstatt\Site\Extension\MapMarker
  *
- * @property \Netwerkstatt\Site\Extension\MapMarker $owner
+ * @property MapMarker $owner
  * @property string $Content
  */
 class MapMarker extends Extension

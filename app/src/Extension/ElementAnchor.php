@@ -11,7 +11,7 @@ use SilverStripe\View\Parsers\URLSegmentFilter;
 /**
  * Class \Netwerkstatt\Site\Extension\ElementAnchor
  *
- * @property BaseElement|\Netwerkstatt\Site\Extension\ElementAnchor $owner
+ * @property BaseElement|ElementAnchor $owner
  * @property string $AnchorName
  */
 class ElementAnchor extends Extension

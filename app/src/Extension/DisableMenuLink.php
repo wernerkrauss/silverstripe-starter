@@ -11,7 +11,7 @@ use SilverStripe\Forms\FieldList;
  *
  * @deprecated not needed any more with own SS6 menu module
  *
- * @property \gorriecoe\Menu\Models\MenuLink|\Netwerkstatt\Site\Extension\DisableMenuLink $owner
+ * @property \gorriecoe\Menu\Models\MenuLink|DisableMenuLink $owner
  * @property bool $Enabled
  */
 class DisableMenuLink extends Extension

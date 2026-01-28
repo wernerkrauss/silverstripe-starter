@@ -10,7 +10,7 @@ use SilverStripe\Security\PermissionProvider;
 /**
  * Class \Netwerkstatt\Site\Extension\CMSPermissions
  *
- * @property \Netwerkstatt\Site\Extension\CMSPermissions $owner
+ * @property CMSPermissions $owner
  */
 class CMSPermissions extends Extension implements PermissionProvider
 {

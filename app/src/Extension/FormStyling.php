@@ -13,7 +13,7 @@ use SilverStripe\Forms\Form;
 /**
  * Class \Netwerkstatt\Site\Extension\FormStyling
  *
- * @property Form|\Netwerkstatt\Site\Extension\FormStyling $owner
+ * @property Form|FormStyling $owner
  */
 class FormStyling extends Extension
 {

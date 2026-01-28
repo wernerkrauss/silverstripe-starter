@@ -9,4 +9,4 @@ if ! [ -x "$(command -v vendor/bin/rector)" ]; then
   exit 1
 fi
 
-php vendor/bin/rector
+php vendor/bin/rector "$@"

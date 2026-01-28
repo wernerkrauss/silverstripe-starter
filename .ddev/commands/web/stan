@@ -10,4 +10,4 @@ if ! [ -x "$(command -v vendor/bin/phpstan)" ]; then
   exit 1
 fi
 
-php vendor/bin/phpstan
+php vendor/bin/phpstan "$@"

@@ -44,6 +44,10 @@ VITE_DEV_SERVER_URL="https://starter-ddev.ddev.site:5173/"
 ```bash
 ddev sake db:build -f
 ```
+or 
+```bash
+ ddev build 
+```
 
 ### Run Silverstripe Tasks
 To get a list of tasks run

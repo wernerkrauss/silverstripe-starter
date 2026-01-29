@@ -30,6 +30,11 @@
       "command": "ddev ci",
       "description": "Runs all CI-relevant checks in DDEV",
       "trusted": true
+    },
+    "build": {
+      "command": "ddev build",
+      "description": "Builds the database and flushes caches in DDEV",
+      "trusted": true
     }
   }
 }

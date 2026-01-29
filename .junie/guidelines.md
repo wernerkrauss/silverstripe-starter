@@ -17,11 +17,12 @@ This project is a Silverstripe CMS application. Development is carried out using
 
 - All PHP commands must be executed via DDEV.
 - Use the commands defined in `.junie.json`:
-    - `ddev phpunit` - Runs PHPUnit tests.
+    - `ddev phpunit` - Runs PHPUnit tests. ALWAYS use this command, never call PHPUnit or tests directly.
     - `ddev lint` - Runs code linting checks.
     - `ddev fix` - Automatically fixes code style issues.
     - `ddev stan` - Performs PHPStan static analysis.
     - `ddev rector` - Runs Rector for automated refactoring.
+    - `ddev build` - Builds the database (db/build) and flushes configuration/cache. Use this when adding new fields or when configuration changes require a flush.
     - `ddev ci` - Runs all checks (lint, stan, rector, tests) combined.
 
 ## Testing Strategy

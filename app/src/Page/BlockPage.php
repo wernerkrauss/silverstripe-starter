@@ -4,7 +4,6 @@ namespace Netwerkstatt\Site\Page;
 
 use Page;
 use Override;
-use DNADesign\Elemental\Models\ElementalArea;
 use DNADesign\Elemental\Extensions\ElementalPageExtension;
 use SilverStripe\Forms\FieldList;
 use SilverStripe\Forms\LiteralField;

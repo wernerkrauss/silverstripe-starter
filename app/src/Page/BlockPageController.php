@@ -13,5 +13,4 @@ use PageController;
  */
 class BlockPageController extends PageController
 {
-
 }

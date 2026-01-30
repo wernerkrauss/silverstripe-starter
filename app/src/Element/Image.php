@@ -11,7 +11,6 @@ use SilverStripe\Forms\FieldList;
 use SilverStripe\ORM\FieldType\DBField;
 use SilverStripe\ORM\FieldType\DBHTMLText;
 
-
 /**
  * @method SSImage Image()
  * @phpstan-ignore annotations.method

@@ -1,6 +1,5 @@
 <?php
 
-
 namespace Netwerkstatt\Site\Extension;
 
 use SilverStripe\Core\Extension;
@@ -20,7 +19,6 @@ use Symbiote\GridFieldExtensions\GridFieldOrderableRows;
  */
 class MapBlock extends Extension
 {
-
     /**
      * @config
      */
@@ -68,6 +66,6 @@ class MapBlock extends Extension
     public function getShowMarkers(): bool
     {
         $style = $this->getOwner()->Style;
-        return $style === 'justmarkers' || $style==='justmarkerscentered' || $style === 'full';
+        return $style === 'justmarkers' || $style === 'justmarkerscentered' || $style === 'full';
     }
 }

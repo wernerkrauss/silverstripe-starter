@@ -2,8 +2,8 @@
 
 namespace Netwerkstatt\Site\Extension;
 
-use SilverStripe\Core\Extension;
 use Override;
+use SilverStripe\Core\Extension;
 use SilverStripe\Security\Permission;
 use SilverStripe\Security\PermissionProvider;
 
@@ -14,7 +14,6 @@ use SilverStripe\Security\PermissionProvider;
  */
 class CMSPermissions extends Extension implements PermissionProvider
 {
-
     /**
      * Return a map of permission codes to add to the dropdown shown in the Security section of the CMS.
      * array(
@@ -25,8 +24,14 @@ class CMSPermissions extends Extension implements PermissionProvider
     public function providePermissions(): array
     {
         return [
-            'CMS_MANAGE_ITEM' => ['name' => 'Items bearbeiten', 'category' => _t('SilverStripe\Security\Permission.CONTENT_CATEGORY', 'Content permissions')],
-            'CMS_DELETE_ITEM' => ['name' => 'Items löschen', 'category' => _t('SilverStripe\Security\Permission.CONTENT_CATEGORY', 'Content permissions')]
+            'CMS_MANAGE_ITEM' => [
+                'name' => 'Items bearbeiten',
+                'category' => _t('SilverStripe\Security\Permission.CONTENT_CATEGORY', 'Content permissions')
+            ],
+            'CMS_DELETE_ITEM' => [
+                'name' => 'Items löschen',
+                'category' => _t('SilverStripe\Security\Permission.CONTENT_CATEGORY', 'Content permissions')
+            ]
         ];
     }
 

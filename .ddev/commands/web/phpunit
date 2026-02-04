@@ -18,9 +18,6 @@ if ! [ -x "$(command -v vendor/bin/phpunit)" ]; then
 fi
 
 # Force DB root credentials so SilverStripe can create a new test DB
-export SS_DATABASE_USERNAME="root"
-export SS_DATABASE_PASSWORD="root"
-
 # Allow overriding server/name via existing .env; only ensure creds are root.
 # Execute phpunit, passing all arguments through
-php -d memory_limit=-1 vendor/bin/phpunit "$@"
+SS_DATABASE_USERNAME="root" SS_DATABASE_PASSWORD="root" php -d memory_limit=-1 vendor/bin/phpunit "$@"

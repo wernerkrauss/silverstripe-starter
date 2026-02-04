@@ -1,8 +1,4 @@
-<main class="w-full max-w-5xl mx-auto my-16 grow">
-
-	<h1 class="text-primary-500 text-center font-bold text-3xl mb-8">$Title</h1>
-    <section class="prose lg:prose-xl max-w-none">
-	$Content
-    $Form
-    </section>
+<main class="mx-auto my-16 w-full max-w-5xl grow">
+  <h1 class="mb-8 text-center text-3xl font-bold text-primary-500">$Title</h1>
+  <section class="prose max-w-none lg:prose-xl">$Content $Form</section>
 </main>

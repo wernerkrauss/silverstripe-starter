@@ -5,11 +5,13 @@
     "swiper": "^11"
   },
   "devDependencies": {
-    "vite": "^6",
-    "tailwindcss": "^4",
-    "@tailwindcss/vite": "^4",
+    "@tailwindcss/forms": "^0.5",
     "@tailwindcss/typography": "^0.5",
-    "@tailwindcss/forms": "^0.5"
+    "@tailwindcss/vite": "^4",
+    "prettier": "^3.8.1",
+    "prettier-plugin-tailwindcss": "^0.7.2",
+    "tailwindcss": "^4",
+    "vite": "^6"
   },
   "scripts": {
     "dev": "vite",
@@ -17,4 +19,3 @@
     "preview": "vite preview"
   }
 }
-

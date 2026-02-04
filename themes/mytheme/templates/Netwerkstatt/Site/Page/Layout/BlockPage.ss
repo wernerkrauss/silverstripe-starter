@@ -1,3 +1,1 @@
-<main class="blockpage">
-    $ElementalArea
-</main>
+<main class="blockpage">$ElementalArea</main>

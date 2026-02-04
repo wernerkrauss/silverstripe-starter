@@ -2,6 +2,10 @@
 
 This project is a Silverstripe CMS application. Development is carried out using DDEV and follows a quality-driven approach with a focus on testing and clean code.
 
+# Workflow
+- new features or bigger refactorings: first make an "Implementation Plan" as answer.
+- wait for explicit OK from the user before modifying files.
+
 ## Language Standards
 
 - All code, including variable names, method names, and comments, must be written in English.
@@ -28,8 +32,15 @@ This project is a Silverstripe CMS application. Development is carried out using
 ## Testing Strategy
 
 - **Unit Testing First**: When implementing new features or fixing bugs, prefer Unit Tests to verify the logic.
-- Before making code changes, create or adapt a test that reproduces the desired behavior or bug.
+- Before making code changes, create or adapt a test that reproduces the desired behaviour or bug.
 - Ensure all tests pass before submitting changes.
+
+## Dependency Management (Composer)
+
+- When modifying a `composer.json` file (in the project or a module), ALWAYS verify that the changes are valid and resolvable.
+- Use `ddev composer validate` to check for syntax and basic configuration errors.
+- Use `ddev composer update --dry-run` to verify if dependencies can be resolved.
+- For modules, ensure that version constraints are consistent with the main project and the target Silverstripe version (e.g., Elemental ^5 for SS5, ^6 for SS6).
 
 ## Quality Assurance
 

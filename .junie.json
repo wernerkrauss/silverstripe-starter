@@ -35,6 +35,16 @@
       "command": "ddev build",
       "description": "Builds the database and flushes caches in DDEV",
       "trusted": true
+    },
+    "prettier": {
+      "command": "ddev prettier",
+      "description": "Runs Prettier to format frontend assets (check|write)",
+      "trusted": true
+    },
+    "vite": {
+      "command": "ddev vite",
+      "description": "Runs Vite commands (dev, build, preview)",
+      "trusted": true
     }
   }
 }

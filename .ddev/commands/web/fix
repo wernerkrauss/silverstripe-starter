@@ -11,3 +11,6 @@ if ! [ -x "$(command -v vendor/bin/phpcbf)" ]; then
 fi
 
 php vendor/bin/phpcbf
+
+echo "*** Running Prettier (Frontend Fixes) ***"
+/mnt/ddev_config/commands/web/prettier write

@@ -17,13 +17,21 @@ else
   echo "✅  PHPUnit OK"
 fi
 
-# 2) Linting
+# 2) Linting (PHP & Prettier)
 echo "*** Linting ***"
 if ! phpcs; then
-  echo "❌  Linting found errors. Please run 'ddev fix' to fix errors automatically and 'ddev lint' to see what's still missing"
+  echo "❌  PHP Linting found errors. Please run 'ddev fix' to fix errors automatically and 'ddev lint' to see what's still missing"
   EXIT_CODE=1
 else
-  echo "✅  Linting OK"
+  echo "✅  PHP Linting OK"
+fi
+
+echo "*** Prettier Check ***"
+if ! /mnt/ddev_config/commands/web/prettier check; then
+  echo "❌  Prettier found formatting issues. Please run 'ddev prettier write' or 'ddev fix' to fix them."
+  EXIT_CODE=1
+else
+  echo "✅  Prettier OK"
 fi
 
 # 3) Rector (dry-run)

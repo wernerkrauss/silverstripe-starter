@@ -29,9 +29,33 @@ You can rename the theme to your own theme name.
 This starter uses vite and tailwindcss for frontend. Vite comes with a dev server and hot reloading; start it with:
 
 ```bash
-cd themes/mytheme
-ddev yarn run dev
+ddev vite dev
 ```
+
+### Frontend Workflows (Vite & Prettier)
+
+Optimized DDEV commands are available for frontend development, utilizing Node.js within the container. 
+
+**Note:** These commands automatically detect the active theme from the Silverstripe configuration (`SSViewer.themes`). They will ignore special themes like `$public` or `$default` and use the first custom theme folder found in `./themes/`.
+
+* **Start Vite Dev Server:**
+  ```bash
+  ddev vite dev
+  ```
+* **Create Production Build:**
+  ```bash
+  ddev vite build
+  ```
+* **Check Code Formatting:**
+  ```bash
+  ddev prettier check
+  ```
+* **Automatically Fix Code Formatting:**
+  ```bash
+  ddev prettier write
+  ```
+
+Formatting covers JavaScript, CSS/SCSS, and Silverstripe templates (`.ss`).
 
 The vite dev server needs the current server name set in a ENV variable:
 
@@ -101,6 +125,8 @@ or
 ddev lint
 ```
 
+This command also runs `prettier check` to verify frontend formatting.
+
 Fix most violations automatically
 ```bash
 ddev composer run fix
@@ -110,6 +136,8 @@ or the shortcut
 ```bash
 ddev fix
 ```
+
+This command also runs `prettier write` to format frontend assets.
 
 ### PHPStan
 PHP Static Code Analyzer is a tool to detect bugs in your code without running it. It can be used to detect type errors, dead code, and other issues.

@@ -7,19 +7,25 @@
           <%--
           <span class="text-xs max-xl:drop-shadow-white xl:text-sm"><img src="$resourceURL('themes/mytheme/images/email-action-unread-1.svg')" alt="E-Mail" class="mr-3 h-4 xl:h-5" /></span>
           --%>
-          <span class="text-xs max-xl:drop-shadow-white xl:text-sm"><img src="<%-- $resourceURL('themes/mytheme/images/phone-2.svg') --%>" alt="E-Mail" class="mr-1 h-4 xl:h-5" /></span>
+          <span class="text-xs max-xl:drop-shadow-white xl:text-sm">
+            <img src="<%-- $resourceURL('themes/mytheme/images/phone-2.svg') --%>" alt="E-Mail" class="mr-1 h-4 xl:h-5" />
+          </span>
           <%--
           <span class="text-xs max-xl:drop-shadow-white xl:text-sm"><img src="$resourceURL('themes/mytheme/images/maps-pin-1.svg')" alt="E-Mail" class="mr-3 h-4 xl:h-5" /></span>
           --%>
           <span><%t Header.Contact 'Contact' %></span>
         </div>
         <div class="mr-3 flex md:mr-5">
-          <a class="text-xs max-xl:drop-shadow-white xl:text-sm" href="$LocaleInformation('de_DE').Link"><img src="<%-- $resourceURL('themes/mytheme/images/flag_de.svg')--%>" alt="Flagge Deutschland" class="mr-3 h-4 xl:h-6" /></a>
+          <a class="text-xs max-xl:drop-shadow-white xl:text-sm" href="$LocaleInformation('de_DE').Link">
+            <img src="<%-- $resourceURL('themes/mytheme/images/flag_de.svg')--%>" alt="Flagge Deutschland" class="mr-3 h-4 xl:h-6" />
+          </a>
           <a class="hidden text-xs max-xl:drop-shadow-white md:block xl:text-sm" href="$LocaleInformation('de_DE').Link">Deutsch</a>
         </div>
 
         <div class="mr-5 flex">
-          <a class="text-xs max-xl:drop-shadow-white xl:text-sm" href="$LocaleInformation('en_GB').Link"><img src="<%--$resourceURL('themes/mytheme/images/flag_en.svg')--%>" alt="Flag Britain" class="mr-3 h-4 xl:h-6" /></a>
+          <a class="text-xs max-xl:drop-shadow-white xl:text-sm" href="$LocaleInformation('en_GB').Link">
+            <img src="<%--$resourceURL('themes/mytheme/images/flag_en.svg')--%>" alt="Flag Britain" class="mr-3 h-4 xl:h-6" />
+          </a>
           <a class="hidden text-xs max-xl:drop-shadow-white md:block xl:text-sm" href="$LocaleInformation('en_GB').Link">English</a>
         </div>
       </div>

@@ -21,7 +21,9 @@
           <% end_if %>
         </div>
         <% end_if %>
-        <div class="<% if $Top.Style != 'justmarkerscentered' %> lg:-mt-20<% end_if %> <% if $PhotoGalleryImages.count %> lg:w-2/5<% end_if %> my-auto mb-10 mt-8 text-center lg:mb-0 lg:group-odd:order-first">
+        <div
+          class="<% if $Top.Style != 'justmarkerscentered' %> lg:-mt-20<% end_if %> <% if $PhotoGalleryImages.count %> lg:w-2/5<% end_if %> my-auto mb-10 mt-8 text-center lg:mb-0 lg:group-odd:order-first"
+        >
           <% if $Title %>
           <h3 class="font-dosis mb-8 text-4xl text-primary-500">$Title</h3>
           <% end_if %> <% if $Content %>
@@ -38,18 +40,18 @@
 <% if $ShowMap %> <% require css('edgarindustries/silverstripe-elemental-map:client/leaflet.css') %> <% require javascript('edgarindustries/silverstripe-elemental-map:client/leaflet.js') %>
 
 <script>
-  var map{$ID} = L.map('elemental-map-{$ID}').setView([{$DefaultLatitude}, {$DefaultLongitude}], {$DefaultZoom});
+  var map{$ID} = L.map("elemental-map-{$ID}").setView([{$DefaultLatitude}, {$DefaultLongitude}], {$DefaultZoom});
 
-  L.tileLayer('{$TileUrl.RAW}', {$LeafletParams.RAW}).addTo(map{$ID});
+  L.tileLayer("{$TileUrl.RAW}", {$LeafletParams.RAW}).addTo(map{$ID});
 
-      <% if $Markers %>
-          <% loop $Markers %>
-          var map{$Up.ID}marker{$ID} = L.marker([{$Latitude}, {$Longitude}]).addTo(map{$Up.ID});
+  <% if $Markers %>;
+  <% loop $Markers %>;
+  var map{$Up.ID}marker{$ID} = L.marker([{$Latitude}, {$Longitude}]).addTo(map{$Up.ID});
 
-              <% if $PopupContent %>
-              map{$Up.ID}marker{$ID}.bindPopup(`{$PopupContent}`);
-              <% end_if %>
-          <% end_loop %>
-      <% end_if %>
+  <% if $PopupContent %>;
+  map{$Up.ID}marker{$ID}.bindPopup(`{$PopupContent}`);
+  <% end_if %>;
+  <% end_loop %>;
+  <% end_if %>;
 </script>
 <% end_if %>

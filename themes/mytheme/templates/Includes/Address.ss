@@ -1,5 +1,13 @@
-<div id="header-address" class="absolute left-[50%] top-12 z-50 hidden translate-x-[-50%] rounded border-2 border-solid border-primary-500 bg-white p-6 opacity-0 shadow-lg transition-opacity">
-  <div id="header-address-close" class="absolute -right-3 -top-3 h-6 w-6 rounded-full border-2 border-solid border-primary-500 bg-white text-center font-bold leading-4 text-primary-500">x</div>
+<div
+  id="header-address"
+  class="absolute left-[50%] top-12 z-50 hidden translate-x-[-50%] rounded border-2 border-solid border-primary-500 bg-white p-6 opacity-0 shadow-lg transition-opacity"
+>
+  <div
+    id="header-address-close"
+    class="absolute -right-3 -top-3 h-6 w-6 rounded-full border-2 border-solid border-primary-500 bg-white text-center font-bold leading-4 text-primary-500"
+  >
+    x
+  </div>
   <div class="w-md mx-auto leading-6" itemtype="http://schema.org/Hotel" itemscope="">
     <div class="no-wrap flex">
       <span itemprop="name" class="text-xl text-primary-500 md:text-2xl">NAME</span>

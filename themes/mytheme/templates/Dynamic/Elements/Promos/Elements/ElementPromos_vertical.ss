@@ -30,7 +30,11 @@
         <% end_if %> <% if $Content %>
         <div class="font-assistant mb-8 px-16 text-lg text-black">$Content</div>
         <% end_if %> <% if $ElementLink %>
-        <p class="font-dosis mb-8 inline rounded-full bg-primary-500 px-8 py-4 uppercase tracking-widest text-white transition-colors duration-300 hover:bg-red-500">$ElementLink</p>
+        <p
+          class="font-dosis mb-8 inline rounded-full bg-primary-500 px-8 py-4 uppercase tracking-widest text-white transition-colors duration-300 hover:bg-red-500"
+        >
+          $ElementLink
+        </p>
         <% end_if %>
       </div>
     </div>

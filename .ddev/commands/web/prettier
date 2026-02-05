@@ -33,10 +33,16 @@ if [ ! -d "$THEME_PATH" ]; then
 fi
 
 echo "--- Using theme: $THEME_NAME ---"
+# We need to stay in the project root for the plugin CLI
+# but cd into theme for standard prettier
 cd "$THEME_PATH"
 
 if [ "$COMMAND" == "write" ]; then
-  npx prettier --write "src/**/*.{js,css,scss}" "templates/**/*.ss"
+  npx prettier --write "src/**/*.{js,css,scss}"
+  cd ../../
+  node tools/prettier-plugin-silverstripe/cli.js --write "themes/$THEME_NAME/templates/**/*.ss"
 else
-  npx prettier --check "src/**/*.{js,css,scss}" "templates/**/*.ss"
+  npx prettier --check "src/**/*.{js,css,scss}"
+  cd ../../
+  node tools/prettier-plugin-silverstripe/cli.js "themes/$THEME_NAME/templates/**/*.ss"
 fi

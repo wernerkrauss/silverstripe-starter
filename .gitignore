@@ -7,6 +7,7 @@
 /public/_graphql/
 /public/assets/
 /themes/*/node_modules
+**/node_modules
 
 .idea
 /error.log

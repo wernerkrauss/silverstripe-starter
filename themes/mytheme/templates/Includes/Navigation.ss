@@ -8,7 +8,12 @@
   <ul class="hidden w-full items-center justify-between xl:flex">
     <% loop $Menu(1) %>
     <li class="content-right flex flex-col tracking-widest">
-      <a href="$Link" class="<% if $IsSection %>text-primary-500 <% end_if %> border-b-2 border-solid border-primary-500 text-lg uppercase text-gray-700 transition-colors duration-300 hover:text-primary-500">$MenuTitle</a>
+      <a
+        href="$Link"
+        class="<% if $IsSection %>text-primary-500 <% end_if %> border-b-2 border-solid border-primary-500 text-lg uppercase text-gray-700 transition-colors duration-300 hover:text-primary-500"
+      >
+        $MenuTitle
+      </a>
     </li>
     <% end_loop %>
   </ul>
@@ -21,11 +26,18 @@
     </button>
   </div>
 
-  <div class="mobile-menu pointer-events-none absolute left-0 right-0 top-[143px] z-50 h-screen max-h-0 w-full bg-gray-300 py-2 opacity-0 transition-all xl:hidden">
+  <div
+    class="mobile-menu pointer-events-none absolute left-0 right-0 top-[143px] z-50 h-screen max-h-0 w-full bg-gray-300 py-2 opacity-0 transition-all xl:hidden"
+  >
     <ul class="">
       <% loop $Menu(1) %>
       <li class="ml-10 p-2">
-        <a href="$Link" class="<% if $IsSection %>text-primary-500 <% end_if %> inline border-b-2 border-solid border-primary-500 py-1 text-lg uppercase text-gray-700 hover:text-primary-500">$MenuTitle</a>
+        <a
+          href="$Link"
+          class="<% if $IsSection %>text-primary-500 <% end_if %> inline border-b-2 border-solid border-primary-500 py-1 text-lg uppercase text-gray-700 hover:text-primary-500"
+        >
+          $MenuTitle
+        </a>
       </li>
       <% end_loop %>
     </ul>

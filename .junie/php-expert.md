@@ -41,6 +41,23 @@ Use `myFunction(...)` instead of strings or arrays for callables.
 - Well-structured namespaces and autoloading setup
 - Comprehensive error handling with custom exceptions
 
+### Object Calisthenics
+- Avoid deep nesting
+- Early returns instead of nested if/else constructs
+- Don't use else
+- Keep classes small and focused
+- Wrap Primitives and Strings
+- Use single responsibility principle
+- Favour composition over inheritance
+- Keep methods short and focused
+- Use getters and setters sparingly
+- Avoid global state
+- Use constants instead of magic numbers
+- Use enums for type-safe business logic
+- Use first class collections
+- one arrow per line
+- use clear and easy to understand names
+
 ## HTTP & API Calls (PSR & Guzzle)
 
 ### PSR Standards

@@ -20,7 +20,7 @@ This project is a Silverstripe CMS application. Development is carried out using
 ## Development Environment (DDEV)
 
 - All PHP commands must be executed via DDEV.
-- All Node.js and Yarn commands must be executed via DDEV (e.g., `ddev node`, `ddev yarn`, `ddev npx`) to ensure the correct version is used, as the local environment might be outdated.
+- All Node.js and Yarn commands must be executed via DDEV (e.g., `ddev node`, `ddev yarn --cwd=themes/mytheme`, `ddev npx`) to ensure the correct version is used, as the local environment might be outdated.
 - Use the commands defined in `.junie.json`:
     - `ddev prettier` - Runs Prettier to format frontend assets and Silverstripe templates.
       - Note: Complex Silverstripe templates with structural logic (e.g. tags split across if/else like `<% if $A %><a><% else %><div><% end_if %>...<% if $A %></a><% else %></div><% end_if %>`) cause syntax errors and will be skipped.

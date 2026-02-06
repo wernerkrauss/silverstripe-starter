@@ -1,11 +1,6 @@
 #!/usr/bin/env node
-const { format, resolveConfig } = require("prettier");
 const fs = require("fs");
 const path = require("path");
-const ssPlugin = require("./index.js");
-
-const MASK_PREFIX = "ssm";
-const MASK_SUFFIX = "m";
 
 async function run() {
   const args = process.argv.slice(2);
@@ -16,27 +11,40 @@ async function run() {
   // Try to find the project root and theme path to load Tailwind plugin if available
   const projectRoot = process.cwd();
   let tailwindPluginPath = null;
+  let prettierPath = "prettier"; // Default to global/npx
   
-  // We assume we are running from project root, and the theme might be in themes/*
-  // Search for prettier-plugin-tailwindcss in the theme's node_modules or project's node_modules
+  // Also check themes/mytheme/node_modules if we can guess the theme
+  const themeMatch = patterns.find(p => p.includes("themes/"));
+  let themeNodeModules = null;
+  if (themeMatch) {
+      const parts = themeMatch.split(/[\\\/]/);
+      const themesIndex = parts.indexOf('themes');
+      if (themesIndex !== -1 && parts.length > themesIndex + 1) {
+          const themeName = parts[themesIndex + 1];
+          themeNodeModules = path.join(projectRoot, "themes", themeName, "node_modules");
+          
+          // Try to load prettier from theme's node_modules
+          const themePrettier = path.join(themeNodeModules, "prettier", "index.js");
+          if (fs.existsSync(themePrettier)) {
+              prettierPath = themePrettier;
+          }
+      }
+  }
+
+  const { format, resolveConfig } = require(prettierPath);
+  const ssPlugin = require("./index.js");
+
   const searchPaths = [
     path.join(projectRoot, "node_modules", "prettier-plugin-tailwindcss", "dist", "index.mjs"),
     path.join(projectRoot, "node_modules", "prettier-plugin-tailwindcss", "lib", "index.js"),
     path.join(projectRoot, "node_modules", "prettier-plugin-tailwindcss", "index.js"),
   ];
   
-  // Also check themes/mytheme/node_modules if we can guess the theme
-  const themeMatch = patterns.find(p => p.includes("themes/"));
-  if (themeMatch) {
-      const parts = themeMatch.split(/[\\\/]/);
-      const themesIndex = parts.indexOf('themes');
-      if (themesIndex !== -1 && parts.length > themesIndex + 1) {
-          const themeName = parts[themesIndex + 1];
-          const themeNodeModules = path.join(projectRoot, "themes", themeName, "node_modules", "prettier-plugin-tailwindcss");
-          searchPaths.push(path.join(themeNodeModules, "dist", "index.mjs"));
-          searchPaths.push(path.join(themeNodeModules, "lib", "index.js"));
-          searchPaths.push(path.join(themeNodeModules, "index.js"));
-      }
+  if (themeNodeModules) {
+      const themeTailwind = path.join(themeNodeModules, "prettier-plugin-tailwindcss");
+      searchPaths.push(path.join(themeTailwind, "dist", "index.mjs"));
+      searchPaths.push(path.join(themeTailwind, "lib", "index.js"));
+      searchPaths.push(path.join(themeTailwind, "index.js"));
   }
 
   for (const p of searchPaths) {
@@ -63,50 +71,36 @@ async function run() {
     
     try {
       const config = await resolveConfig(filePath);
-      const masks = [];
-      const maskMap = new Map();
-      const maskedText = content.replace(/<%--.*?--%>|<%.*?%>|\{\$.*?\}|\$[\w.]+(?:\(.*?\))?/gs, (match, offset, fullText) => {
-        // Special case: if it's a variable and we're inside a tag name position
-        // e.g. <$Var> or </$Var> or <h$Level>
-        const before = fullText.slice(0, offset);
-        const isTagName = match.startsWith("$") && 
-          (before.endsWith("<") || before.endsWith("</") || before.endsWith("<h") || before.endsWith("</h"));
-        
-        if (maskMap.has(match)) {
-          const existing = maskMap.get(match);
-          if (isTagName === existing.isTagName) {
-            return existing.placeholder;
-          }
-        }
-
-        let placeholder;
-        if (isTagName) {
-          placeholder = `ssv${masks.length}v`;
-        } else {
-          placeholder = `${MASK_PREFIX}${masks.length}${MASK_SUFFIX}`;
-        }
-
-        masks.push(match);
-        maskMap.set(match, { placeholder, isTagName });
-        return placeholder;
-      });
-
+      
       const options = {
         ...config,
-        parser: "html", // Temporarily tell Prettier it's HTML
+        parser: "silverstripe",
         plugins: [
           path.join(__dirname, "index.js"),
-          ...(tailwindPluginPath ? [tailwindPluginPath] : [])
         ],
-        // Ensure tailwind config path is absolute and relative to the config file (or current workdir)
-        ...(config && config.tailwindConfig ? { 
-          tailwindConfig: path.resolve(projectRoot, "themes", "mytheme", config.tailwindConfig) 
-        } : {}),
       };
-
-      const formattedMasked = await format(maskedText, options);
       
-      const finalOutput = ssPlugin.__unmask(formattedMasked, masks);
+      // If we found tailwind plugin, add it to the plugins list
+      if (tailwindPluginPath) {
+          options.plugins.push(tailwindPluginPath);
+      }
+      
+      // Ensure Tailwind processes .ss files by treating them as HTML
+      options.filepath = filePath.replace(/\.ss$/, ".html");
+      
+      // Also ensure the tailwind config path is correct relative to the file
+      if (themeNodeModules) {
+          const themeDir = path.dirname(themeNodeModules);
+          options.tailwindConfig = path.join(themeDir, "tailwind.config.js");
+      }
+
+      const formatted = await format(content, options);
+      
+      // Since prettier format returns the final string, and our plugin now 
+      // uses the preprocess hack, we might still need to unmask if we want to 
+      // be 100% sure, but wait, the plugin's preprocess is called inside format.
+      // We still need the unmasking because the plugin doesn't have a post-format hook.
+      const finalOutput = ssPlugin.__postProcess(formatted);
 
       if (isWrite) {
         if (content !== finalOutput) {

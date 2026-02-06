@@ -33,16 +33,10 @@ if [ ! -d "$THEME_PATH" ]; then
 fi
 
 echo "--- Using theme: $THEME_NAME ---"
-# We need to stay in the project root for the plugin CLI
-# but cd into theme for standard prettier
-cd "$THEME_PATH"
+# We use yarn --cwd to use the prettier version installed in the theme
 
-if [ "$COMMAND" == "write" ]; then
-  npx prettier --write "src/**/*.{js,css,scss}"
-  cd ../../
-  node tools/prettier-plugin-silverstripe/cli.js --write "themes/$THEME_NAME/templates/**/*.ss"
+if [[ "$COMMAND" == "write" || "$COMMAND" == "--write" ]]; then
+  yarn --cwd "$THEME_PATH" prettier --write "src/**/*.{js,css,scss}" "templates/**/*.ss"
 else
-  npx prettier --check "src/**/*.{js,css,scss}"
-  cd ../../
-  node tools/prettier-plugin-silverstripe/cli.js "themes/$THEME_NAME/templates/**/*.ss"
+  yarn --cwd "$THEME_PATH" prettier --check "src/**/*.{js,css,scss}" "templates/**/*.ss"
 fi

@@ -7,11 +7,8 @@ const format = async (code) => {
     parser: "silverstripe",
     plugins: [path.join(__dirname, "../index.js")],
   };
-  const formattedMasked = await prettier.format(code, options);
   
-  // The plugin masks during preprocess. We use the helper to unmask the result.
-  // We need to pass the masks that were stored in options during preprocess
-  return plugin.__postProcess(formattedMasked, options);
+  return await prettier.format(code, options);
 };
 
 describe("Silverstripe Prettier Plugin", () => {

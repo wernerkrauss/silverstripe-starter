@@ -31,15 +31,16 @@
     "wernerkrauss/silverstripe-menumanager": "dev-main"
   },
   "require-dev": {
-    "phpunit/phpunit": "^11.3",
+    "phpunit/phpunit": "^12.0|^13",
     "squizlabs/php_codesniffer": "^4",
     "wernerkrauss/silverstripe-rector": "^1",
     "phpstan/extension-installer": "^1.0",
     "cambis/silverstan": "^2",
-    "deployer/deployer": "^7",
+    "deployer/deployer": "^8.0",
     "dnadesign/silverstripe-populate": "^4",
     "silverstripe/standards": "^1.2.3",
-    "rector/jack": "^0.5"
+    "rector/jack": "^0.5",
+    "sebastian/diff": "dev-main as 6.1"
   },
   "extra": {
     "resources-dir": "_resources",

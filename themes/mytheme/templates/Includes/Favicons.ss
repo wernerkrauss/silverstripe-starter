@@ -16,7 +16,8 @@
 <link rel="apple-touch-icon" sizes="152x152" href="$resourceURL('themes/mytheme/images/favicon/apple-icon-152x152.png')" />
 --%> <%--
 <link rel="apple-touch-icon" sizes="180x180" href="$resourceURL('themes/mytheme/images/favicon/apple-icon-180x180.png')" />
---%> <%--
+--%>
+<%--
 <link rel="icon" type="image/png" sizes="192x192" href="$resourceURL('themes/mytheme/images/favicon/android-icon-192x192.png')" />
 --%> <%--
 <link rel="icon" type="image/png" sizes="32x32" href="$resourceURL('themes/mytheme/images/favicon/favicon-32x32.png')" />

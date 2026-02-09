@@ -8,34 +8,35 @@ function mask(text) {
   const masks = [];
   const maskMap = new Map();
 
-  const maskedText = text.replace(SS_TAG_REGEX, (match, offset, fullText) => {
-    const before = fullText.slice(0, offset);
-    const isTagName =
-      match.startsWith("$") &&
-      (before.endsWith("<") ||
-        before.endsWith("</") ||
-        before.endsWith("<h") ||
-        before.endsWith("</h"));
-
+  const maskedText = text.replace(SS_TAG_REGEX, (match) => {
     if (maskMap.has(match)) {
-      const existing = maskMap.get(match);
-      if (isTagName === existing.isTagName) {
-        return existing.placeholder;
-      }
+      return maskMap.get(match);
     }
 
-    let placeholder;
-    if (isTagName) {
-      placeholder = `ssv${masks.length}v`;
-    } else {
-      placeholder = `${MASK_PREFIX}${masks.length}${MASK_SUFFIX}`;
-    }
+    // Variables starting with $ are masked as ssv...v
+    // which is valid as both tag name and content in Prettier's HTML parser.
+    const placeholder = match.startsWith("$")
+      ? `ssv${masks.length}v`
+      : `${MASK_PREFIX}${masks.length}${MASK_SUFFIX}`;
 
     masks.push(match);
-    maskMap.set(match, { placeholder, isTagName });
+    maskMap.set(match, placeholder);
     return placeholder;
   });
-  return { maskedText, masks };
+
+  // Load plugins for internal call
+  const internalPlugins = [];
+  try {
+    // Check if tailwind is installed in the project
+    const tailwindPath = require.resolve("prettier-plugin-tailwindcss", {
+      paths: [process.cwd()],
+    });
+    internalPlugins.push(tailwindPath);
+  } catch (e) {
+    // Tailwind not found, that's fine
+  }
+
+  return { maskedText, masks, internalPlugins };
 }
 
 function unmask(text, masks) {
@@ -61,19 +62,7 @@ const silverstripePlugin = {
   parsers: {
     silverstripe: {
       parse: async (text, options) => {
-        const { maskedText, masks } = mask(text);
-
-        // Load plugins for internal call
-        const internalPlugins = [];
-        try {
-          // Check if tailwind is installed in the project
-          const tailwindPath = require.resolve("prettier-plugin-tailwindcss", {
-            paths: [process.cwd()],
-          });
-          internalPlugins.push(tailwindPath);
-        } catch (e) {
-          // Tailwind not found, that's fine
-        }
+        const { maskedText, masks, internalPlugins } = mask(text);
 
         // Call prettier.format internally
         const formatted = await prettier.format(maskedText, {

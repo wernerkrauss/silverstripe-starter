@@ -51,3 +51,19 @@ This project is a Silverstripe CMS application. Development is carried out using
 
 - Run `ddev ci` before every `submit` to ensure that the code meets all standards and no regressions are introduced.
 
+## Troubleshooting & "Running in Circles"
+
+If you find yourself stuck or repeating the same failed steps:
+- **Check the Basics**: Verify if the environment (DDEV, Node, PHP) matches your assumptions. Use `ddev --version` or `node -v` if unsure.
+- **Isolate the Problem**: Create a minimal reproduction case or use the module's own test suite (e.g., `tools/prettier-plugin-silverstripe/__tests__`) instead of testing in the main project.
+- **Clean State**: When working with Node.js/Yarn, try clearing caches or `node_modules` (`rm -rf node_modules && ddev yarn install`).
+- **Review History**: Check your previous steps to see if you are repeating a strategy that already failed.
+- **Ask for Help**: If you have made 3 genuine attempts to fix an issue without progress, describe what you've tried and ask the user for guidance.
+
+## Plugin Development Learnings
+
+- When working on a local Node.js module (like `prettier-plugin-silverstripe`) that is used in a theme:
+    - Ensure it is linked correctly (e.g., via `file:` dependency in `package.json`).
+    - After making changes to the plugin, remember that `node_modules` in the theme might need an update or re-installation (`rm -rf node_modules/your-plugin && ddev yarn install`) to reflect the latest changes, unless symlinks are handled automatically by the package manager.
+    - Always verify changes within the plugin's own test suite first before testing it in the main project.
+

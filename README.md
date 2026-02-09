@@ -174,6 +174,34 @@ ddev rector
 For the first time run it's recommended to refactor rule by rule. Run rector-dry to see which rules would be applied, then let rector change the code.
 
 
+### Prettier
+Prettier is a JavaScript tool for code formatting. It's configured in the base theme to format SS templates. 
+It's recommended to use it for all JavaScript and CSS files. It's also used to format SS templates in the base theme. See also the configuration file `themes/mytheme/.prettierrc`.
+
+```bash
+ddev prettier check #dry-run
+ddev prettier write #change files
+```
+
+### Jack
+Jack is a tool for checking and lifting composer dependencies. It's configured to check for outdated dependencies and lifter to update them automatically.
+
+```bash
+ddev jack breakpoint #check for outdated packages
+ddev jack open-versions #allow newer, non breaking major versions
+ddev jack raise-to-installed #update versions to the latest installed versions
+```
+
+### CI
+This starter template comes with a CI tool, that includes all the relevant tools for continuous integration:
+- PHPUnit: unit tests
+- PHPCS: code sniffer and linting for PHP code
+- Prettier: code formatting for JavaScript, CSS and Silverstripe templates
+- Rector: code update for PHP
+- PHPStan: static analysis tool for PHP code
+- Jack: composer updated checker and lifter
+
+
 [//]: # (## Populate fixtures:)
 
 [//]: # (```bash)
@@ -231,3 +259,71 @@ or
 ```bash
 ddev composer deploy
 ```
+
+## PHPStorm integration
+### DDEV Plugin
+
+### Node.js + PhpStorm + DDEV Setup (Windows + WSL2)
+
+A compact guide to quickly set up project-specific Node.js using nvm, PhpStorm, and DDEV.
+
+---
+
+#### 1. WSL Project Location
+
+- Open project in WSL, **not C:\**
+- Example path:  
+#### 2. Install nvm in WSL 
+```bash 
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash source ~/.bashrc 
+``` 
+#### 3. Install Project Node Version 
+```bash 
+# Check DDEV Node version 
+ddev ssh node -v 
+# Install same version in WSL 
+nvm install <version> 
+nvm use <version> 
+# Optional: create .nvmrc for project 
+echo "<version>" > .nvmrc 
+nvm use 
+``` 
+#### 4. PhpStorm Node Setup 
+- `File → Settings → Languages & Frameworks → JavaScript Runtime` 
+- **Add WSL Node interpreter** 
+- Distribution: `Ubuntu` 
+- - Node path: `/home/<user>/.nvm/versions/node/v<version>/bin/node`
+- Package manager is auto-detected. 
+
+#### 5. ESLint / Prettier (Optional) - ESLint: 
+ Settings → Languages & Frameworks → JavaScript → Code Quality Tools → ESLint ` 
+- Node interpreter: WSL Node 
+- ESLint package: `themes/<mytheme>/node_modules/eslint` 
+- Prettier: `Settings → Languages & Frameworks → JavaScript → Prettier `
+  - Node interpreter: WSL Node 
+  - Prettier package: `themes/<mytheme>/node_modules/prettier`
+
+#### 6. Run Configurations 
+- Use *WSL Node* as runtime 
+- Package manager: *Custom → ddev npm*
+- Commands execute like: 
+  - `bash ddev npm run dev`
+#### 7. DDEV Config Sync 
+```yaml 
+# .ddev/config.yaml 
+nodejs_version: "22" 
+``` 
+- Keep `.nvmrc` same as DDEV version.
+
+#### 8. Quick Test 
+```bash 
+which node 
+node -v 
+ddev npm -v 
+``` 
+- PhpStorm Run Script → should execute via `ddev npm run <script>`. 
+### ✅ Notes 
+- Always open projects from **WSL**, not Windows paths. 
+- nvm manages Node for IDE; DDEV handles container builds.
+- `.nvmrc` ensures consistent Node across environments.
+- Avoids conflicts with local Windows Node versions.

@@ -38,7 +38,8 @@
     "cambis/silverstan": "^2",
     "deployer/deployer": "^7",
     "dnadesign/silverstripe-populate": "^4",
-    "silverstripe/standards": "^1.2.3"
+    "silverstripe/standards": "^1.2.3",
+    "rector/jack": "^0.5"
   },
   "extra": {
     "resources-dir": "_resources",

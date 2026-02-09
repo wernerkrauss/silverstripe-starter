@@ -32,6 +32,7 @@ STATUS_PHPCS="SKIP"
 STATUS_PRETTIER="SKIP"
 STATUS_RECTOR="SKIP"
 STATUS_PHPSTAN="SKIP"
+STATUS_JACK="SKIP"
 
 # 1) PHPUnit
 echo "*** PHPUnit ***"
@@ -91,6 +92,17 @@ else
   EXIT_CODE=1
 fi
 
+#6) Rector/Jack
+echo "*** Checking for outdated packages"
+if jack breakpoint;
+then
+  echo -e "${GREEN}[OK] Jack's package check passed${NC}"
+  STATUS_JACK="OK"
+else
+  echo -e "${RED}[ERROR] Jack found too many outdated packages. Please update${NC}"
+  STATUS_JACK="FAILED"
+  EXIT_CODE=1
+fi
 # --- SUMMARY ---
 echo -e "\n================ SUMMARY ================"
 
@@ -111,6 +123,7 @@ print_status "PHP Linting" "$STATUS_PHPCS"
 print_status "Prettier" "$STATUS_PRETTIER"
 print_status "Rector" "$STATUS_RECTOR"
 print_status "PHPStan" "$STATUS_PHPSTAN"
+print_status "Jack" "$STATUS_JACK"
 
 echo "========================================="
 

@@ -672,8 +672,10 @@ postcss@^8.5.3:
     picocolors "^1.1.1"
     source-map-js "^1.2.1"
 
-"prettier-plugin-silverstripe@file:../../tools/prettier-plugin-silverstripe":
-  version "1.0.0"
+prettier-plugin-silverstripe@0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/prettier-plugin-silverstripe/-/prettier-plugin-silverstripe-0.1.0.tgz#9dd9ab5e84cc6f137a5960493c8f470f15ba4ce8"
+  integrity sha512-E32FzllbWHxq8smZJ40IMD0DVFGgmXPFX8qi/QXxJ5W35mzqFgxmzkXrzbCEdVKMNpulGrlPNQwp8jumOrEH4g==
   optionalDependencies:
     prettier-plugin-tailwindcss ">=0.6.0"
 

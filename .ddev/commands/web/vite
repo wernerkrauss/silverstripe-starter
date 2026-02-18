@@ -29,4 +29,4 @@ fi
 
 echo "--- Using theme: $THEME_NAME ---"
 cd "$THEME_PATH"
-npx vite "$@"
+yarn run dev "$@"
